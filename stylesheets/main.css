@@ -9,32 +9,38 @@
 /* ============ */
 /* line 23, ../sass/main.scss */
 *, *::before, *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* line 27, ../sass/main.scss */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 /* line 34, ../sass/main.scss */
 body {
   font-family: sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 /* line 39, ../sass/main.scss */
 img {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 /* line 43, ../sass/main.scss */
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /* line 47, ../sass/main.scss */
 ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 /* line 52, ../sass/main.scss */
 hr {
@@ -42,7 +48,8 @@ hr {
   height: 4px;
   background: rgba(50, 50, 50, 0.15);
   border-radius: 50%;
-  width: 80%; }
+  width: 80%;
+}
 
 /* line 60, ../sass/main.scss */
 header {
@@ -52,49 +59,41 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3; }
-  /* line 69, ../sass/main.scss */
-  header .background-pane {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: center;
-        -ms-flex-flow: center;
-            flex-flow: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-            align-content: center;
-    width: 100%;
-    height: 80px;
-    background-color: #000;
-    opacity: 1;
-    color: #fff; }
-    /* line 80, ../sass/main.scss */
-    header .background-pane .title {
-      -webkit-box-flex: 1;
-      -webkit-flex-grow: 1;
-          -ms-flex-positive: 1;
-              flex-grow: 1;
-      text-align: center;
-      font-size: 1.5em;
-      text-shadow: 2px 2px 0px #BB0C00; }
+  z-index: 3;
+}
+/* line 69, ../sass/main.scss */
+header .background-pane {
+  display: flex;
+  flex-flow: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+  opacity: 1;
+  color: #fff;
+}
+/* line 80, ../sass/main.scss */
+header .background-pane .title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 0px #BB0C00;
+}
 
 /* line 89, ../sass/main.scss */
 section {
   width: 100%;
-  padding-bottom: 80px; }
+  padding-bottom: 80px;
+}
 
 /* line 94, ../sass/main.scss */
 .page-title {
   text-align: center;
   font-size: 3em;
   color: #BB0C00;
-  margin: 80px 0; }
+  margin: 80px 0;
+}
 
 /* ================= */
 /* == MINI PLAYER == */
@@ -103,23 +102,22 @@ section {
 .player-progress {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   right: 1em;
-  color: #fff; }
-  /* line 110, ../sass/main.scss */
-  .player-progress .play-button {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 100%;
-    text-align: center; }
-  /* line 116, ../sass/main.scss */
-  .player-progress:hover {
-    cursor: pointer; }
+  color: #fff;
+}
+/* line 110, ../sass/main.scss */
+.player-progress .play-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+/* line 116, ../sass/main.scss */
+.player-progress:hover {
+  cursor: pointer;
+}
 
 /* ================= */
 /* == SIDEDRAWER == */
@@ -130,24 +128,25 @@ section {
   display: block;
   cursor: pointer;
   opacity: 0.5;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-  position: absolute; }
-  /* line 133, ../sass/main.scss */
-  .menu-button:hover {
-    opacity: 0.8; }
-  /* line 137, ../sass/main.scss */
-  .menu-button.close {
-    right: 27px;
-    top: 27px; }
-  /* line 142, ../sass/main.scss */
-  .menu-button.open {
-    left: 27px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
+  transition: all 0.3s ease;
+  position: absolute;
+}
+/* line 133, ../sass/main.scss */
+.menu-button:hover {
+  opacity: 0.8;
+}
+/* line 137, ../sass/main.scss */
+.menu-button.close {
+  right: 27px;
+  top: 27px;
+}
+/* line 142, ../sass/main.scss */
+.menu-button.open {
+  left: 27px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 /* line 148, ../sass/main.scss */
 side-drawer {
@@ -160,29 +159,27 @@ side-drawer {
   color: #fff;
   z-index: 4;
   box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.36);
-  -webkit-transform: translateX(-300px);
-      -ms-transform: translateX(-300px);
-          transform: translateX(-300px);
+  transform: translateX(-300px);
   opacity: 0;
-  -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease; }
-  /* line 150, ../sass/main.scss */
-  side-drawer::before {
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    display: block;
-    background: rgba(0, 0, 0, 0.9);
-    width: 100%;
-    height: 100%; }
+  transition: all 0.5s ease;
+}
+/* line 150, ../sass/main.scss */
+side-drawer::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: block;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+}
 
 /* line 180, ../sass/main.scss */
 side-drawer.open {
-  -webkit-transform: translateX(0px);
-      -ms-transform: translateX(0px);
-          transform: translateX(0px);
-  opacity: 1; }
+  transform: translateX(0px);
+  opacity: 1;
+}
 
 /* ================== */
 /* == HERO/LANDING == */
@@ -193,81 +190,84 @@ side-drawer.open {
   height: 100vh;
   background-size: cover;
   background-position: 70% top;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
   position: relative;
-  -webkit-transition: all 2s ease;
-          transition: all 2s ease; }
-  /* line 201, ../sass/main.scss */
-  .artist-hero .artist-name {
-    color: #fff;
-    text-shadow: 2px 2px 0px #BB0C00;
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center; }
-    /* line 206, ../sass/main.scss */
-    .artist-hero .artist-name h1 {
-      margin: 0; }
-    /* line 210, ../sass/main.scss */
-    .artist-hero .artist-name h1 + span {
-      font-size: 1em !important; }
-      @media screen and (min-width: 768px) {
-        /* line 210, ../sass/main.scss */
-        .artist-hero .artist-name h1 + span {
-          font-size: 40px !important; } }
-  /* line 220, ../sass/main.scss */
-  .artist-hero .social-media {
-    width: 100%;
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0; }
-    /* line 227, ../sass/main.scss */
-    .artist-hero .social-media .to-next {
-      display: block;
-      position: absolute;
-      top: -100%;
-      left: 50%;
-      color: rgba(187, 12, 0, 0.7);
-      opacity: 0;
-      text-shadow: 0 0 0 #fff;
-      cursor: pointer; }
-      /* line 237, ../sass/main.scss */
-      .artist-hero .social-media .to-next i {
-        -webkit-transition: all 0.4s ease;
-                transition: all 0.4s ease; }
-      /* line 241, ../sass/main.scss */
-      .artist-hero .social-media .to-next:hover i {
-        -webkit-transform: scale(1.25);
-            -ms-transform: scale(1.25);
-                transform: scale(1.25); }
-    /* line 246, ../sass/main.scss */
-    .artist-hero .social-media li {
-      text-align: center;
-      display: inline-block; }
-      @media screen and (max-width: 634px) {
-        /* line 246, ../sass/main.scss */
-        .artist-hero .social-media li {
-          margin: 0.5em 0; } }
-      /* line 254, ../sass/main.scss */
-      .artist-hero .social-media li a {
-        color: white;
-        padding: 0 0.5em;
-        text-shadow: 2px 2px 0px #BB0C00;
-        opacity: 0.8;
-        -webkit-transition: all 0.4s ease;
-        font-size: 1.5em; }
-        /* line 262, ../sass/main.scss */
-        .artist-hero .social-media li a:hover {
-          opacity: 1;
-          text-shadow: 0px 0px 0px #BB0C00; }
+  transition: all 2s ease;
+}
+/* line 201, ../sass/main.scss */
+.artist-hero .artist-name {
+  color: #fff;
+  text-shadow: 2px 2px 0px #BB0C00;
+  align-self: center;
+}
+/* line 206, ../sass/main.scss */
+.artist-hero .artist-name h1 {
+  margin: 0;
+}
+/* line 210, ../sass/main.scss */
+.artist-hero .artist-name h1 + span {
+  font-size: 1em !important;
+}
+@media screen and (min-width: 768px) {
+  /* line 210, ../sass/main.scss */
+  .artist-hero .artist-name h1 + span {
+    font-size: 40px !important;
+  }
+}
+/* line 220, ../sass/main.scss */
+.artist-hero .social-media {
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+/* line 227, ../sass/main.scss */
+.artist-hero .social-media .to-next {
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  color: rgba(187, 12, 0, 0.7);
+  opacity: 0;
+  text-shadow: 0 0 0 #fff;
+  cursor: pointer;
+}
+/* line 237, ../sass/main.scss */
+.artist-hero .social-media .to-next i {
+  transition: all 0.4s ease;
+}
+/* line 241, ../sass/main.scss */
+.artist-hero .social-media .to-next:hover i {
+  transform: scale(1.25);
+}
+/* line 246, ../sass/main.scss */
+.artist-hero .social-media li {
+  text-align: center;
+  display: inline-block;
+}
+@media screen and (max-width: 634px) {
+  /* line 246, ../sass/main.scss */
+  .artist-hero .social-media li {
+    margin: 0.5em 0;
+  }
+}
+/* line 254, ../sass/main.scss */
+.artist-hero .social-media li a {
+  color: white;
+  padding: 0 0.5em;
+  text-shadow: 2px 2px 0px #BB0C00;
+  opacity: 0.8;
+  -webkit-transition: all 0.4s ease;
+  font-size: 1.5em;
+}
+/* line 262, ../sass/main.scss */
+.artist-hero .social-media li a:hover {
+  opacity: 1;
+  text-shadow: 0px 0px 0px #BB0C00;
+}
 
 /* =================== */
 /* == MUSIC SECTION == */
@@ -276,108 +276,127 @@ side-drawer.open {
 slick.albums .slick-arrow {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   color: rgba(187, 12, 0, 0.2);
   cursor: pointer;
-  z-index: 1; }
+  z-index: 1;
+}
 /* line 285, ../sass/main.scss */
 slick.albums .arrow-left {
-  left: 5%; }
-  @media screen and (min-width: 1000px) {
-    /* line 285, ../sass/main.scss */
-    slick.albums .arrow-left {
-      left: 15%; } }
+  left: 5%;
+}
+@media screen and (min-width: 1000px) {
+  /* line 285, ../sass/main.scss */
+  slick.albums .arrow-left {
+    left: 15%;
+  }
+}
 /* line 293, ../sass/main.scss */
 slick.albums .arrow-right {
-  right: 5%; }
-  @media screen and (min-width: 1000px) {
-    /* line 293, ../sass/main.scss */
-    slick.albums .arrow-right {
-      right: 15%; } }
+  right: 5%;
+}
+@media screen and (min-width: 1000px) {
+  /* line 293, ../sass/main.scss */
+  slick.albums .arrow-right {
+    right: 15%;
+  }
+}
 /* line 303, ../sass/main.scss */
 slick.albums .album .container {
   margin: 0 auto;
   text-align: center;
-  max-width: 680px; }
-  @media screen and (min-width: 680px) {
-    /* line 303, ../sass/main.scss */
-    slick.albums .album .container {
-      text-align: left;
-      padding: 0 30px; } }
+  max-width: 680px;
+}
+@media screen and (min-width: 680px) {
+  /* line 303, ../sass/main.scss */
+  slick.albums .album .container {
+    text-align: left;
+    padding: 0 30px;
+  }
+}
+/* line 313, ../sass/main.scss */
+slick.albums .album .container .artwork {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+}
+@media screen and (min-width: 680px) {
   /* line 313, ../sass/main.scss */
   slick.albums .album .container .artwork {
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin: 0 auto 10px;
-    border-radius: 2px; }
-    @media screen and (min-width: 680px) {
-      /* line 313, ../sass/main.scss */
-      slick.albums .album .container .artwork {
-        float: left;
-        margin-right: 40px; } }
-  /* line 326, ../sass/main.scss */
-  slick.albums .album .container > div, slick.albums .album .container .album-title, slick.albums .album .container .buy-link {
-    margin: 0 0 10px 0; }
-  /* line 330, ../sass/main.scss */
-  slick.albums .album .container .buy-link {
-    display: inline-block;
-    margin-top: 30px;
-    border: 1px solid #BB0C00;
-    border-radius: 4px;
-    width: 190px;
-    text-align: center;
-    padding: 5px 0;
-    color: #BB0C00; }
-  /* line 341, ../sass/main.scss */
-  slick.albums .album .container .track-count {
-    width: 100%;
     float: left;
-    font-size: 14px;
-    color: rgba(151, 151, 151, 0.4);
-    margin: 30px 0; }
+    margin-right: 40px;
+  }
+}
+/* line 326, ../sass/main.scss */
+slick.albums .album .container > div, slick.albums .album .container .album-title, slick.albums .album .container .buy-link {
+  margin: 0 0 10px 0;
+}
+/* line 330, ../sass/main.scss */
+slick.albums .album .container .buy-link {
+  display: inline-block;
+  margin-top: 30px;
+  border: 1px solid #BB0C00;
+  border-radius: 4px;
+  width: 190px;
+  text-align: center;
+  padding: 5px 0;
+  color: #BB0C00;
+}
+/* line 341, ../sass/main.scss */
+slick.albums .album .container .track-count {
+  width: 100%;
+  float: left;
+  font-size: 14px;
+  color: rgba(151, 151, 151, 0.4);
+  margin: 30px 0;
+}
+/* line 349, ../sass/main.scss */
+slick.albums .album .container .album-tracks {
+  margin: 0 auto;
+  color: #4A4A4A;
+  text-align: left;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -webkit-column-fill: balance;
+  -moz-column-fill: balance;
+}
+@media screen and (min-width: 680px) {
   /* line 349, ../sass/main.scss */
   slick.albums .album .container .album-tracks {
-    margin: 0 auto;
-    color: #4A4A4A;
-    text-align: left;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    -webkit-column-fill: balance;
-    -moz-column-fill: balance; }
-    @media screen and (min-width: 680px) {
-      /* line 349, ../sass/main.scss */
-      slick.albums .album .container .album-tracks {
-        float: left; } }
-    @media screen and (min-width: 680px) {
-      /* line 363, ../sass/main.scss */
-      slick.albums .album .container .album-tracks ul {
-        padding-left: 20px;
-        border-left: 1px solid rgba(151, 151, 151, 0.4);
-        margin-top: 0; } }
-    /* line 370, ../sass/main.scss */
-    slick.albums .album .container .album-tracks ul li {
-      display: block;
-      width: 300px;
-      margin: 0 auto 10px; }
-      /* line 375, ../sass/main.scss */
-      slick.albums .album .container .album-tracks ul li span:nth-child(1) {
-        display: inline-block;
-        width: 30px;
-        text-align: right;
-        margin-right: 20px; }
+    float: left;
+  }
+}
+@media screen and (min-width: 680px) {
+  /* line 363, ../sass/main.scss */
+  slick.albums .album .container .album-tracks ul {
+    padding-left: 20px;
+    border-left: 1px solid rgba(151, 151, 151, 0.4);
+    margin-top: 0;
+  }
+}
+/* line 370, ../sass/main.scss */
+slick.albums .album .container .album-tracks ul li {
+  display: block;
+  width: 300px;
+  margin: 0 auto 10px;
+}
+/* line 375, ../sass/main.scss */
+slick.albums .album .container .album-tracks ul li span:nth-child(1) {
+  display: inline-block;
+  width: 30px;
+  text-align: right;
+  margin-right: 20px;
+}
 
 /* ==================== */
 /* == PHOTOS SECTION == */
 /* ==================== */
 /* line 1, ../sass/_photo-grid.scss */
 .flowGrid {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+}
 
 /* line 5, ../sass/_photo-grid.scss */
 .flowGridItem {
@@ -385,22 +404,27 @@ slick.albums .album .container {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.2);
-  overflow: hidden; }
-  /* line 12, ../sass/_photo-grid.scss */
-  .flowGridItem img {
-    width: 100%; }
-  /* line 16, ../sass/_photo-grid.scss */
-  .flowGridItem h2 {
-    text-align: center;
-    font-size: 16px; }
+  overflow: hidden;
+}
+/* line 12, ../sass/_photo-grid.scss */
+.flowGridItem img {
+  width: 100%;
+}
+/* line 16, ../sass/_photo-grid.scss */
+.flowGridItem h2 {
+  text-align: center;
+  font-size: 16px;
+}
 
 /* line 22, ../sass/_photo-grid.scss */
 .flowGridColumn {
-  padding-left: 10px; }
+  padding-left: 10px;
+}
 
 /* line 26, ../sass/_photo-grid.scss */
 .flowGridColumn:last-of-type {
-  padding-right: 10px; }
+  padding-right: 10px;
+}
 
 /* line 30, ../sass/_photo-grid.scss */
 .fg-modal {
@@ -411,89 +435,86 @@ slick.albums .album .container {
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
   z-index: 9999;
-  display: none; }
-  /* line 40, ../sass/_photo-grid.scss */
-  .fg-modal .modal-frame {
-    background: #fff;
-    overflow: hidden;
-    border-radius: 7px;
-    box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.36);
-    position: relative; }
-    /* line 47, ../sass/_photo-grid.scss */
-    .fg-modal .modal-frame img {
-      display: block;
-      height: 500px; }
-    /* line 52, ../sass/_photo-grid.scss */
-    .fg-modal .modal-frame h2 {
-      text-align: center; }
-    /* line 56, ../sass/_photo-grid.scss */
-    .fg-modal .modal-frame .modal-next, .fg-modal .modal-frame .modal-prev, .fg-modal .modal-frame .modal-close {
-      color: #fff;
-      text-align: center;
-      width: 100px;
-      height: 30px;
-      background: rgba(0, 0, 0, 0.7);
-      line-height: 30px;
-      display: block;
-      position: absolute;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
-      right: 0;
-      cursor: pointer; }
-    /* line 71, ../sass/_photo-grid.scss */
-    .fg-modal .modal-frame .modal-prev {
-      right: none;
-      left: 0; }
-    /* line 77, ../sass/_photo-grid.scss */
-    .fg-modal .modal-frame .modal-close {
-      top: 20px; }
+  display: none;
+}
+/* line 40, ../sass/_photo-grid.scss */
+.fg-modal .modal-frame {
+  background: #fff;
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.36);
+  position: relative;
+}
+/* line 47, ../sass/_photo-grid.scss */
+.fg-modal .modal-frame img {
+  display: block;
+  height: 500px;
+}
+/* line 52, ../sass/_photo-grid.scss */
+.fg-modal .modal-frame h2 {
+  text-align: center;
+}
+/* line 56, ../sass/_photo-grid.scss */
+.fg-modal .modal-frame .modal-next, .fg-modal .modal-frame .modal-prev, .fg-modal .modal-frame .modal-close {
+  color: #fff;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  line-height: 30px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  cursor: pointer;
+}
+/* line 71, ../sass/_photo-grid.scss */
+.fg-modal .modal-frame .modal-prev {
+  right: none;
+  left: 0;
+}
+/* line 77, ../sass/_photo-grid.scss */
+.fg-modal .modal-frame .modal-close {
+  top: 20px;
+}
 
 /* line 84, ../sass/_photo-grid.scss */
 .noscroll {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* line 88, ../sass/_photo-grid.scss */
 .modal-open {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  justify-content: center;
+  align-items: center;
+}
 
 /* ==================== */
 /* == VIDEOS SECTION == */
 /* ==================== */
 /* line 1, ../sass/_video-grid.scss */
 .video-grid {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-  /* line 6, ../sass/_video-grid.scss */
-  .video-grid .video-cell {
-    margin: 16px; }
-    /* line 9, ../sass/_video-grid.scss */
-    .video-grid .video-cell iframe {
-      width: 100%;
-      border: none;
-      display: block;
-      margin: 0 auto; }
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* line 6, ../sass/_video-grid.scss */
+.video-grid .video-cell {
+  margin: 16px;
+  border: 1px solid red;
+  flex-grow: 1;
+  height: 400px;
+}
+/* line 12, ../sass/_video-grid.scss */
+.video-grid .video-cell iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
 
 /* ============ */
 /* == FOOTER == */
@@ -502,16 +523,12 @@ slick.albums .album .container {
 footer {
   width: 100%;
   background: #000;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  /* line 7, ../sass/_footer.scss */
-  footer p {
-    font-weight: bold;
-    font-size: 70%;
-    color: rgba(255, 255, 255, 0.5); }
+  justify-content: center;
+}
+/* line 7, ../sass/_footer.scss */
+footer p {
+  font-weight: bold;
+  font-size: 70%;
+  color: rgba(255, 255, 255, 0.5);
+}

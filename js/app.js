@@ -25,10 +25,6 @@ app.factory('ArtistService', function() {
 				bio: 'Joshua Redman is one of the most acclaimed and charismatic jazz artists to have emerged in the decade of the 1990s. Born in Berkeley, California, he is the son of legendary saxophonist Dewey Redman and dancer Renee Shedroff.',
 				socialMediaLinks: [
 					{
-						service: 'instagram',
-						url: 'http://instagram.com'
-					},
-					{
 						service: 'spotify',
 						url: 'http://spotify.com'
 					},
@@ -37,12 +33,8 @@ app.factory('ArtistService', function() {
 						url: 'http://soundcloud.com'
 					},
 					{
-						service: 'twitter',
-						url: 'http://twitter.com'
-					},
-					{
-						service: 'apple',
-						url: 'http://apple.com'
+						service: 'facebook',
+						url: 'http://facebook.com'
 					},
 					{
 						service: 'youtube',
@@ -52,25 +44,20 @@ app.factory('ArtistService', function() {
 				albums: [
 					{
 						image: 'http://www.joshuaredman.com/sites/g/files/g2000002901/f/styles/media_gallery_large/public/201304/walking-shadows.jpg',
-						title: 'Walking Shadows',
+						title: 'Found My Place',
 						artists: [
-							'Joshua Redman'
+							'Jody Calcara'
 						],
-						year: 2013,
-						buyLink: 'http://www.amazon.com/Walking-Shadows-Joshua-Redman/dp/B00BWDJILG',
+						year: 2015,
+						buyLink: '',
 						tracks: [
-							'The Folks Who Live on the Hill',
-							'Lush Life',
-							'Stop This Rain',
-							'Adagio',
-							'Easy Living',
-							'Doll Is Mine',
-							'Infant Eyes',
-							'Let It Be',
-							'Final Hour',
-							'Last Glimpse of Gotham',
-							'Stardust',
-							'Let Me Down Easy'
+							'Found My Place',
+							'The Wells',
+							'Close To Me',
+							'Volcanoes',
+							'Waiting For You',
+							'Leaving Footprints',
+							'See You Down the Road'
 						]
 					}
 				]
@@ -227,7 +214,7 @@ app.controller('MiniPlayerController', function($scope) {
 	};
 
 	$scope.max = 100;
-	$scope.progress = 50;
+	$scope.progress = 25;
 });
 
 
