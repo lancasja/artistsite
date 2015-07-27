@@ -1,12 +1,13 @@
 .video-grid {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 
 	.video-cell {
-		flex-grow: 1;
+		margin: 16px;
 
 		iframe {
-			max-width: 640px;
+			width: 100%;
 			border: none;
 			display: block;
 			margin: 0 auto;

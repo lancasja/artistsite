@@ -300,9 +300,6 @@ app.controller('VideoSectionController', function($scope) {
 		},
 		{
 			src: "Y7d42LJfkqQ"
-		},
-		{
-			src: "Fw_crqWYBCM"
 		}
 	];
 

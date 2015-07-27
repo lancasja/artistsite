@@ -156,7 +156,7 @@ side-drawer {
   top: 0;
   width: 300px;
   height: 100vh;
-  background: #333;
+  background: rgba(50, 50, 50, 0.9);
   color: #fff;
   z-index: 4;
   box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.36);
@@ -166,8 +166,18 @@ side-drawer {
   opacity: 0;
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease; }
+  /* line 150, ../sass/main.scss */
+  side-drawer::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%; }
 
-/* line 167, ../sass/main.scss */
+/* line 180, ../sass/main.scss */
 side-drawer.open {
   -webkit-transform: translateX(0px);
       -ms-transform: translateX(0px);
@@ -177,7 +187,7 @@ side-drawer.open {
 /* ================== */
 /* == HERO/LANDING == */
 /* ================== */
-/* line 176, ../sass/main.scss */
+/* line 189, ../sass/main.scss */
 .artist-hero {
   width: 100%;
   height: 100vh;
@@ -195,31 +205,31 @@ side-drawer.open {
   position: relative;
   -webkit-transition: all 2s ease;
           transition: all 2s ease; }
-  /* line 188, ../sass/main.scss */
+  /* line 201, ../sass/main.scss */
   .artist-hero .artist-name {
     color: #fff;
     text-shadow: 2px 2px 0px #BB0C00;
     -webkit-align-self: center;
         -ms-flex-item-align: center;
             align-self: center; }
-    /* line 193, ../sass/main.scss */
+    /* line 206, ../sass/main.scss */
     .artist-hero .artist-name h1 {
       margin: 0; }
-    /* line 197, ../sass/main.scss */
+    /* line 210, ../sass/main.scss */
     .artist-hero .artist-name h1 + span {
       font-size: 1em !important; }
       @media screen and (min-width: 768px) {
-        /* line 197, ../sass/main.scss */
+        /* line 210, ../sass/main.scss */
         .artist-hero .artist-name h1 + span {
           font-size: 40px !important; } }
-  /* line 207, ../sass/main.scss */
+  /* line 220, ../sass/main.scss */
   .artist-hero .social-media {
     width: 100%;
     display: block;
     position: absolute;
     left: 0;
     bottom: 0; }
-    /* line 214, ../sass/main.scss */
+    /* line 227, ../sass/main.scss */
     .artist-hero .social-media .to-next {
       display: block;
       position: absolute;
@@ -229,24 +239,24 @@ side-drawer.open {
       opacity: 0;
       text-shadow: 0 0 0 #fff;
       cursor: pointer; }
-      /* line 224, ../sass/main.scss */
+      /* line 237, ../sass/main.scss */
       .artist-hero .social-media .to-next i {
         -webkit-transition: all 0.4s ease;
                 transition: all 0.4s ease; }
-      /* line 228, ../sass/main.scss */
+      /* line 241, ../sass/main.scss */
       .artist-hero .social-media .to-next:hover i {
         -webkit-transform: scale(1.25);
             -ms-transform: scale(1.25);
                 transform: scale(1.25); }
-    /* line 233, ../sass/main.scss */
+    /* line 246, ../sass/main.scss */
     .artist-hero .social-media li {
       text-align: center;
       display: inline-block; }
       @media screen and (max-width: 634px) {
-        /* line 233, ../sass/main.scss */
+        /* line 246, ../sass/main.scss */
         .artist-hero .social-media li {
           margin: 0.5em 0; } }
-      /* line 241, ../sass/main.scss */
+      /* line 254, ../sass/main.scss */
       .artist-hero .social-media li a {
         color: white;
         padding: 0 0.5em;
@@ -254,7 +264,7 @@ side-drawer.open {
         opacity: 0.8;
         -webkit-transition: all 0.4s ease;
         font-size: 1.5em; }
-        /* line 249, ../sass/main.scss */
+        /* line 262, ../sass/main.scss */
         .artist-hero .social-media li a:hover {
           opacity: 1;
           text-shadow: 0px 0px 0px #BB0C00; }
@@ -262,7 +272,7 @@ side-drawer.open {
 /* =================== */
 /* == MUSIC SECTION == */
 /* =================== */
-/* line 263, ../sass/main.scss */
+/* line 276, ../sass/main.scss */
 slick.albums .slick-arrow {
   position: absolute;
   top: 50%;
@@ -272,31 +282,31 @@ slick.albums .slick-arrow {
   color: rgba(187, 12, 0, 0.2);
   cursor: pointer;
   z-index: 1; }
-/* line 272, ../sass/main.scss */
+/* line 285, ../sass/main.scss */
 slick.albums .arrow-left {
   left: 5%; }
   @media screen and (min-width: 1000px) {
-    /* line 272, ../sass/main.scss */
+    /* line 285, ../sass/main.scss */
     slick.albums .arrow-left {
       left: 15%; } }
-/* line 280, ../sass/main.scss */
+/* line 293, ../sass/main.scss */
 slick.albums .arrow-right {
   right: 5%; }
   @media screen and (min-width: 1000px) {
-    /* line 280, ../sass/main.scss */
+    /* line 293, ../sass/main.scss */
     slick.albums .arrow-right {
       right: 15%; } }
-/* line 290, ../sass/main.scss */
+/* line 303, ../sass/main.scss */
 slick.albums .album .container {
   margin: 0 auto;
   text-align: center;
   max-width: 680px; }
   @media screen and (min-width: 680px) {
-    /* line 290, ../sass/main.scss */
+    /* line 303, ../sass/main.scss */
     slick.albums .album .container {
       text-align: left;
       padding: 0 30px; } }
-  /* line 300, ../sass/main.scss */
+  /* line 313, ../sass/main.scss */
   slick.albums .album .container .artwork {
     width: 200px;
     height: 200px;
@@ -304,14 +314,14 @@ slick.albums .album .container {
     margin: 0 auto 10px;
     border-radius: 2px; }
     @media screen and (min-width: 680px) {
-      /* line 300, ../sass/main.scss */
+      /* line 313, ../sass/main.scss */
       slick.albums .album .container .artwork {
         float: left;
         margin-right: 40px; } }
-  /* line 313, ../sass/main.scss */
+  /* line 326, ../sass/main.scss */
   slick.albums .album .container > div, slick.albums .album .container .album-title, slick.albums .album .container .buy-link {
     margin: 0 0 10px 0; }
-  /* line 317, ../sass/main.scss */
+  /* line 330, ../sass/main.scss */
   slick.albums .album .container .buy-link {
     display: inline-block;
     margin-top: 30px;
@@ -321,14 +331,14 @@ slick.albums .album .container {
     text-align: center;
     padding: 5px 0;
     color: #BB0C00; }
-  /* line 328, ../sass/main.scss */
+  /* line 341, ../sass/main.scss */
   slick.albums .album .container .track-count {
     width: 100%;
     float: left;
     font-size: 14px;
     color: rgba(151, 151, 151, 0.4);
     margin: 30px 0; }
-  /* line 336, ../sass/main.scss */
+  /* line 349, ../sass/main.scss */
   slick.albums .album .container .album-tracks {
     margin: 0 auto;
     color: #4A4A4A;
@@ -338,21 +348,21 @@ slick.albums .album .container {
     -webkit-column-fill: balance;
     -moz-column-fill: balance; }
     @media screen and (min-width: 680px) {
-      /* line 336, ../sass/main.scss */
+      /* line 349, ../sass/main.scss */
       slick.albums .album .container .album-tracks {
         float: left; } }
     @media screen and (min-width: 680px) {
-      /* line 350, ../sass/main.scss */
+      /* line 363, ../sass/main.scss */
       slick.albums .album .container .album-tracks ul {
         padding-left: 20px;
         border-left: 1px solid rgba(151, 151, 151, 0.4);
         margin-top: 0; } }
-    /* line 357, ../sass/main.scss */
+    /* line 370, ../sass/main.scss */
     slick.albums .album .container .album-tracks ul li {
       display: block;
       width: 300px;
       margin: 0 auto 10px; }
-      /* line 362, ../sass/main.scss */
+      /* line 375, ../sass/main.scss */
       slick.albums .album .container .album-tracks ul li span:nth-child(1) {
         display: inline-block;
         width: 30px;
@@ -471,16 +481,37 @@ slick.albums .album .container {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center; }
-  /* line 5, ../sass/_video-grid.scss */
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  /* line 6, ../sass/_video-grid.scss */
   .video-grid .video-cell {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
-    /* line 8, ../sass/_video-grid.scss */
+    margin: 16px; }
+    /* line 9, ../sass/_video-grid.scss */
     .video-grid .video-cell iframe {
-      max-width: 640px;
+      width: 100%;
       border: none;
       display: block;
       margin: 0 auto; }
+
+/* ============ */
+/* == FOOTER == */
+/* ============ */
+/* line 1, ../sass/_footer.scss */
+footer {
+  width: 100%;
+  background: #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  /* line 7, ../sass/_footer.scss */
+  footer p {
+    font-weight: bold;
+    font-size: 70%;
+    color: rgba(255, 255, 255, 0.5); }
