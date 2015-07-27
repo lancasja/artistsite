@@ -60,8 +60,8 @@
 	<side-drawer class="">
 
 		<a class="menu-button close" side-drawer-toggle>
-	  	<i class="fa fa-close fa-2x"></i>
-	  </a>
+			<i class="fa fa-close fa-2x"></i>
+		</a>
 
 	</side-drawer>
 
@@ -72,8 +72,8 @@
 		</div>
 
 		<a class="menu-button open" side-drawer-toggle>
-	  	<i class="fa fa-bars fa-2x"></i>
-	  </a>
+			<i class="fa fa-bars fa-2x"></i>
+		</a>
 
 		<div class="player-progress" ng-controller="MiniPlayerController" ng-click="playPause()">
 			<div
@@ -82,7 +82,7 @@
 				current="progress"
 				color="#BB0C00"
 				bgcolor="#eaeaea"
-				radius="30"
+				radius="20"
 				stroke="5"
 				semi="false"
 				rounded="false"
@@ -124,7 +124,7 @@
 
 	<!-- MUSIC -->
 	<section class="music-section tk-proxima-nova" ng-controller="MusicSectionController">
-		<h1 class="page-title tk-estilo-pro">Music</h1>
+		<h1 class="page-title tk-estilo-pro">Albums</h1>
 
 		<slick class="albums"
 			accessibility="true"
@@ -182,14 +182,15 @@
 		</slick>
 	</section>
 
+	<hr>
 
 	<!-- PHOTOS -->
 	<section class="photo-section tk-proxima-nova" ng-controller="PhotoSectionController">
 		
 		<h1 class="page-title tk-estilo-pro">Photos</h1>
 
-		<ul class="flowGrid" ng-flow-grid="homePageGrid" min-item-width="200">
-			<li class="flowGridItem" ng-repeat="photo in photos">
+		<ul class="flowGrid" ng-flow-grid="photoGrid" min-item-width="200">
+			<li class="flowGridItem" ng-repeat="photo in photos" ng-click="showModal($index)">
 				<a href="">
 					<img ng-src="{{photo.source}}">
 				</a>
@@ -199,25 +200,44 @@
 			</li>
 		</ul>
 
+		<div class="fg-modal">
+
+			<div class="modal-frame">
+				
+				<img ng-src="{{modalImg}}">
+				<h2>{{modalName}}</h2>
+
+				<span class="modal-next" ng-click="nextPhoto()">
+					Next
+				</span>
+
+				<span class="modal-prev" ng-click="prevPhoto()">
+					Prev
+				</span>
+
+				<span class="modal-close" ng-click="dismissModal()">
+					Close
+				</span>
+
+			</div>
+
+		</div>
 	</section>
 
 
+	<hr>
 
+	<!-- VIDEO SECTION -->
+	<section class="video-section tk-proxima-nova" ng-controller="VideoSectionController">
+		<h1 class="page-title tk-estilo-pro">Videos</h1>
 
+		<div class="video-grid">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+			<div class="video-cell" ng-repeat="video in videos">
+				<iframe ng-src="{{getIframeSrc(video.src)}}"></iframe>
+			</div>
+		</div>
+	</section>
 
 </body>
 </html>

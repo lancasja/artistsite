@@ -5,6 +5,12 @@ var app = angular.module('artistApp', [
 	'ngFlowGrid'
 ]);
 
+app.config(function($sceDelegateProvider) {
+	$sceDelegateProvider.resourceUrlWhitelist([
+		'self',
+		'https://www.youtube.com/**'
+		]);
+});
 /* ============== */
 /* == SERVICES == */
 /* ============== */
@@ -75,6 +81,38 @@ app.factory('ArtistService', function() {
 
 app.factory('PhotoService', function() {
 	var photos = [
+		{
+			name: 'Pleasure Boy',
+			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
+		},
+		{
+			name: 'Pleasure Boy',
+			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
+		},
+		{
+			name: 'Platypus',
+			source: 'http://images.nationalgeographic.com/wpf/media-live/photos/000/006/cache/platypus_662_600x450.jpg'
+		},
+		{
+			name: 'Bilbo',
+			source: 'http://gifts.worldwildlife.org/gift-center/Images/large-species-photo/large-Duck-billed-Platypus-photo.jpg'
+		},
+		{
+			name: 'Pleasure Boy',
+			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
+		},
+		{
+			name: 'Pleasure Boy',
+			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
+		},
+		{
+			name: 'Platypus',
+			source: 'http://images.nationalgeographic.com/wpf/media-live/photos/000/006/cache/platypus_662_600x450.jpg'
+		},
+		{
+			name: 'Bilbo',
+			source: 'http://gifts.worldwildlife.org/gift-center/Images/large-species-photo/large-Duck-billed-Platypus-photo.jpg'
+		},
 		{
 			name: 'Pleasure Boy',
 			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
@@ -204,11 +242,77 @@ app.controller('MusicSectionController', function($scope, ArtistService) {
 
 
 app.controller('PhotoSectionController', function($scope, PhotoService, fgDelegate) {
+	
 	$scope.photos = PhotoService.getPhotos();
 
+	var modal = document.querySelector('.fg-modal');
+	var currentPhoto;
+	
+	$scope.showModal = function(index) {
+		modal.classList.add('modal-open');
+
+		currentPhoto = index;
+
+		$scope.modalImg = $scope.photos[index].source;
+		$scope.modalName = $scope.photos[index].name;
+	}
+
+
+	$scope.nextPhoto = function() {
+
+		if (currentPhoto >= $scope.photos.length - 1) {
+			currentPhoto = 0;
+			console.log('Beginning.');
+		}
+		else {
+			currentPhoto += 1;
+			console.log('Next');
+		}
+
+		$scope.modalImg = $scope.photos[currentPhoto].source;
+	}
+
+	$scope.prevPhoto = function() {
+
+		if (currentPhoto <= 0) {
+			currentPhoto = $scope.photos.length - 1;
+			console.log('End.');
+		}
+		else {
+			currentPhoto -= 1;
+			console.log('Prev');
+		}
+
+		$scope.modalImg = $scope.photos[currentPhoto].source;
+	}
+
+	$scope.dismissModal = function() {
+		modal.classList.remove('modal-open');
+	}
 	
 });
 
+app.controller('VideoSectionController', function($scope) {
+
+	$scope.videos = [
+		{
+			src: "2_t0ffY3JvE",
+		},
+		{
+			src: "Y7d42LJfkqQ"
+		},
+		{
+			src: "Fw_crqWYBCM"
+		}
+	];
+
+	$scope.getIframeSrc = function(src) {
+		return 'https://www.youtube.com/embed/' + src;
+	};
+
+	$scope.featured = $scope.videos[0].src;
+
+});
 
 
 

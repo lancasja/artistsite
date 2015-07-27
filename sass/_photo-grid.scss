@@ -1,25 +1,92 @@
-.flowGrid::before, .flowGrid::after {
-	content: "";
-	display: table;
-}
-
-.flowGrid::after {
-	clear: both;
+.flowGrid {
+	display: flex;
 }
 
 .flowGridItem {
 	margin-bottom: 10px;
-}
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.2);
+	overflow: hidden;
 
-.flowGridItem img {
-	width: 100%;
+	img {
+		width: 100%;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 16px;
+	}
 }
 
 .flowGridColumn {
-	float: left;
 	padding-left: 10px;
 }
 
 .flowGridColumn:last-of-type {
 	padding-right: 10px;
+}
+
+.fg-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 9999;
+	display: none;
+
+	.modal-frame {
+		background: #fff;
+		overflow: hidden;
+		border-radius: 7px;
+		box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.36);
+		position: relative;
+
+		img {
+			display: block;
+			height: 500px;
+		}
+
+		h2 {
+			text-align: center;
+		}
+
+		.modal-next {
+			color: #fff;
+			text-align: center;
+			width: 100px;
+			height: 30px;
+			background: rgba(0, 0, 0, 0.7);
+			line-height: 30px;
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			cursor: pointer;
+		}
+
+		.modal-prev {
+			@extend .modal-next;
+			right: none;
+			left: 0;
+		}
+
+		.modal-close {
+			@extend .modal-next;
+			top: 20px;
+		}
+	}
+}
+
+.noscroll {
+	overflow: hidden;
+}
+
+.modal-open {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

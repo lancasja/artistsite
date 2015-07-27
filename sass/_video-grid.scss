@@ -1,0 +1,15 @@
+.video-grid {
+	display: flex;
+	justify-content: center;
+
+	.video-cell {
+		flex-grow: 1;
+
+		iframe {
+			max-width: 640px;
+			border: none;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
