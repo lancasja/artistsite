@@ -63,6 +63,17 @@
 			<i class="fa fa-close fa-2x"></i>
 		</a>
 
+		<div class="side-drawer-content">
+			<h2>Sidedrawer Title</h2>
+
+			<ul class="side-drawer-links">
+				<li><a href="#landing-section" animate-to-anchor>Home</a></li>
+				<li><a href="#album-section" animate-to-anchor>Albums</a></li>
+				<li><a href="#photo-section" animate-to-anchor>Photos</a></li>
+				<li><a href="#video-section" animate-to-anchor>Videos</a></li>
+				<li><a href="#contact-footer" animate-to-anchor>Contact</a></li>
+			</ul>
+		</div>
 	</side-drawer>
 
 	<header ng-controller="HeaderController" scroll-fade>
@@ -100,7 +111,7 @@
 
 
 	<!-- LANDING/HOME -->
-	<section class="artist-hero" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url({{artist.image}});" ng-controller="ArtistController">
+	<section id="landing-section" class="artist-hero" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url({{artist.image}});" ng-controller="ArtistController">
 
 		<div class="artist-name tk-estilo-pro animated" fittext="1" fittext-max="100" ng-init="fadeInTitle()">
 			<h1 fittext-nl>{{artist.name}}</h1>
@@ -122,8 +133,8 @@
 		</div>
 	</section>
 
-	<!-- MUSIC -->
-	<section class="music-section tk-proxima-nova" ng-controller="MusicSectionController">
+	<!-- ALBUMS -->
+	<section id="album-section" class="music-section tk-proxima-nova" ng-controller="MusicSectionController">
 		<h1 class="page-title tk-estilo-pro">Albums</h1>
 
 		<slick class="albums"
@@ -185,7 +196,7 @@
 	<hr>
 
 	<!-- PHOTOS -->
-	<section class="photo-section tk-proxima-nova" ng-controller="PhotoSectionController">
+	<section id="photo-section" class="photo-section tk-proxima-nova" ng-controller="PhotoSectionController">
 		
 		<h1 class="page-title tk-estilo-pro">Photos</h1>
 
@@ -228,7 +239,7 @@
 	<hr>
 
 	<!-- VIDEO SECTION -->
-	<section class="video-section tk-proxima-nova" ng-controller="VideoSectionController">
+	<section id="video-section" class="video-section tk-proxima-nova" ng-controller="VideoSectionController">
 		<h1 class="page-title tk-estilo-pro">Videos</h1>
 
 		<div class="video-grid">
@@ -239,7 +250,7 @@
 		</div>
 	</section>
 
-	<footer>
+	<footer id="contact-footer">
 		<p>Jody Calcara &copy;2015, All rights reserved.</p>
 	</footer>
 </body>

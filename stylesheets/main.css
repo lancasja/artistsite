@@ -122,7 +122,7 @@ section {
 /* ================= */
 /* == SIDEDRAWER == */
 /* ================= */
-/* line 125, ../sass/main.scss */
+/* line 1, ../sass/_side-drawer.scss */
 .menu-button {
   color: #fff;
   display: block;
@@ -131,16 +131,16 @@ section {
   transition: all 0.3s ease;
   position: absolute;
 }
-/* line 133, ../sass/main.scss */
+/* line 9, ../sass/_side-drawer.scss */
 .menu-button:hover {
   opacity: 0.8;
 }
-/* line 137, ../sass/main.scss */
+/* line 13, ../sass/_side-drawer.scss */
 .menu-button.close {
   right: 27px;
   top: 27px;
 }
-/* line 142, ../sass/main.scss */
+/* line 18, ../sass/_side-drawer.scss */
 .menu-button.open {
   left: 27px;
   position: absolute;
@@ -148,7 +148,7 @@ section {
   transform: translateY(-50%);
 }
 
-/* line 148, ../sass/main.scss */
+/* line 24, ../sass/_side-drawer.scss */
 side-drawer {
   position: fixed;
   left: 0;
@@ -163,7 +163,7 @@ side-drawer {
   opacity: 0;
   transition: all 0.5s ease;
 }
-/* line 150, ../sass/main.scss */
+/* line 26, ../sass/_side-drawer.scss */
 side-drawer::before {
   content: "";
   position: fixed;
@@ -173,18 +173,49 @@ side-drawer::before {
   background: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
-/* line 180, ../sass/main.scss */
+/* line 57, ../sass/_side-drawer.scss */
 side-drawer.open {
   transform: translateX(0px);
   opacity: 1;
 }
 
+/* line 62, ../sass/_side-drawer.scss */
+.side-drawer-content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 66, ../sass/_side-drawer.scss */
+.side-drawer-content h2 {
+  margin-left: 18px;
+}
+/* line 72, ../sass/_side-drawer.scss */
+.side-drawer-content .side-drawer-links li:first-child a {
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+/* line 76, ../sass/_side-drawer.scss */
+.side-drawer-content .side-drawer-links li:last-child a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+/* line 80, ../sass/_side-drawer.scss */
+.side-drawer-content .side-drawer-links li a {
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  width: 100%;
+  padding: 18px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
 /* ================== */
 /* == HERO/LANDING == */
 /* ================== */
-/* line 189, ../sass/main.scss */
+/* line 130, ../sass/main.scss */
 .artist-hero {
   width: 100%;
   height: 100vh;
@@ -196,27 +227,27 @@ side-drawer.open {
   position: relative;
   transition: all 2s ease;
 }
-/* line 201, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .artist-hero .artist-name {
   color: #fff;
   text-shadow: 2px 2px 0px #BB0C00;
   align-self: center;
 }
-/* line 206, ../sass/main.scss */
+/* line 147, ../sass/main.scss */
 .artist-hero .artist-name h1 {
   margin: 0;
 }
-/* line 210, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 .artist-hero .artist-name h1 + span {
   font-size: 1em !important;
 }
 @media screen and (min-width: 768px) {
-  /* line 210, ../sass/main.scss */
+  /* line 151, ../sass/main.scss */
   .artist-hero .artist-name h1 + span {
     font-size: 40px !important;
   }
 }
-/* line 220, ../sass/main.scss */
+/* line 161, ../sass/main.scss */
 .artist-hero .social-media {
   width: 100%;
   display: block;
@@ -224,7 +255,7 @@ side-drawer.open {
   left: 0;
   bottom: 0;
 }
-/* line 227, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 .artist-hero .social-media .to-next {
   display: block;
   position: absolute;
@@ -235,26 +266,26 @@ side-drawer.open {
   text-shadow: 0 0 0 #fff;
   cursor: pointer;
 }
-/* line 237, ../sass/main.scss */
+/* line 178, ../sass/main.scss */
 .artist-hero .social-media .to-next i {
   transition: all 0.4s ease;
 }
-/* line 241, ../sass/main.scss */
+/* line 182, ../sass/main.scss */
 .artist-hero .social-media .to-next:hover i {
   transform: scale(1.25);
 }
-/* line 246, ../sass/main.scss */
+/* line 187, ../sass/main.scss */
 .artist-hero .social-media li {
   text-align: center;
   display: inline-block;
 }
 @media screen and (max-width: 634px) {
-  /* line 246, ../sass/main.scss */
+  /* line 187, ../sass/main.scss */
   .artist-hero .social-media li {
     margin: 0.5em 0;
   }
 }
-/* line 254, ../sass/main.scss */
+/* line 195, ../sass/main.scss */
 .artist-hero .social-media li a {
   color: white;
   padding: 0 0.5em;
@@ -263,7 +294,7 @@ side-drawer.open {
   -webkit-transition: all 0.4s ease;
   font-size: 1.5em;
 }
-/* line 262, ../sass/main.scss */
+/* line 203, ../sass/main.scss */
 .artist-hero .social-media li a:hover {
   opacity: 1;
   text-shadow: 0px 0px 0px #BB0C00;
@@ -272,7 +303,7 @@ side-drawer.open {
 /* =================== */
 /* == MUSIC SECTION == */
 /* =================== */
-/* line 276, ../sass/main.scss */
+/* line 217, ../sass/main.scss */
 slick.albums .slick-arrow {
   position: absolute;
   top: 50%;
@@ -281,40 +312,40 @@ slick.albums .slick-arrow {
   cursor: pointer;
   z-index: 1;
 }
-/* line 285, ../sass/main.scss */
+/* line 226, ../sass/main.scss */
 slick.albums .arrow-left {
   left: 5%;
 }
 @media screen and (min-width: 1000px) {
-  /* line 285, ../sass/main.scss */
+  /* line 226, ../sass/main.scss */
   slick.albums .arrow-left {
     left: 15%;
   }
 }
-/* line 293, ../sass/main.scss */
+/* line 234, ../sass/main.scss */
 slick.albums .arrow-right {
   right: 5%;
 }
 @media screen and (min-width: 1000px) {
-  /* line 293, ../sass/main.scss */
+  /* line 234, ../sass/main.scss */
   slick.albums .arrow-right {
     right: 15%;
   }
 }
-/* line 303, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 slick.albums .album .container {
   margin: 0 auto;
   text-align: center;
   max-width: 680px;
 }
 @media screen and (min-width: 680px) {
-  /* line 303, ../sass/main.scss */
+  /* line 244, ../sass/main.scss */
   slick.albums .album .container {
     text-align: left;
     padding: 0 30px;
   }
 }
-/* line 313, ../sass/main.scss */
+/* line 254, ../sass/main.scss */
 slick.albums .album .container .artwork {
   width: 200px;
   height: 200px;
@@ -323,17 +354,17 @@ slick.albums .album .container .artwork {
   border-radius: 2px;
 }
 @media screen and (min-width: 680px) {
-  /* line 313, ../sass/main.scss */
+  /* line 254, ../sass/main.scss */
   slick.albums .album .container .artwork {
     float: left;
     margin-right: 40px;
   }
 }
-/* line 326, ../sass/main.scss */
+/* line 267, ../sass/main.scss */
 slick.albums .album .container > div, slick.albums .album .container .album-title, slick.albums .album .container .buy-link {
   margin: 0 0 10px 0;
 }
-/* line 330, ../sass/main.scss */
+/* line 271, ../sass/main.scss */
 slick.albums .album .container .buy-link {
   display: inline-block;
   margin-top: 30px;
@@ -344,7 +375,7 @@ slick.albums .album .container .buy-link {
   padding: 5px 0;
   color: #BB0C00;
 }
-/* line 341, ../sass/main.scss */
+/* line 282, ../sass/main.scss */
 slick.albums .album .container .track-count {
   width: 100%;
   float: left;
@@ -352,7 +383,7 @@ slick.albums .album .container .track-count {
   color: rgba(151, 151, 151, 0.4);
   margin: 30px 0;
 }
-/* line 349, ../sass/main.scss */
+/* line 290, ../sass/main.scss */
 slick.albums .album .container .album-tracks {
   margin: 0 auto;
   color: #4A4A4A;
@@ -363,26 +394,26 @@ slick.albums .album .container .album-tracks {
   -moz-column-fill: balance;
 }
 @media screen and (min-width: 680px) {
-  /* line 349, ../sass/main.scss */
+  /* line 290, ../sass/main.scss */
   slick.albums .album .container .album-tracks {
     float: left;
   }
 }
 @media screen and (min-width: 680px) {
-  /* line 363, ../sass/main.scss */
+  /* line 304, ../sass/main.scss */
   slick.albums .album .container .album-tracks ul {
     padding-left: 20px;
     border-left: 1px solid rgba(151, 151, 151, 0.4);
     margin-top: 0;
   }
 }
-/* line 370, ../sass/main.scss */
+/* line 311, ../sass/main.scss */
 slick.albums .album .container .album-tracks ul li {
   display: block;
   width: 300px;
   margin: 0 auto 10px;
 }
-/* line 375, ../sass/main.scss */
+/* line 316, ../sass/main.scss */
 slick.albums .album .container .album-tracks ul li span:nth-child(1) {
   display: inline-block;
   width: 30px;
@@ -503,11 +534,10 @@ slick.albums .album .container .album-tracks ul li span:nth-child(1) {
 /* line 6, ../sass/_video-grid.scss */
 .video-grid .video-cell {
   margin: 16px;
-  border: 1px solid red;
   flex-grow: 1;
   height: 400px;
 }
-/* line 12, ../sass/_video-grid.scss */
+/* line 11, ../sass/_video-grid.scss */
 .video-grid .video-cell iframe {
   width: 100%;
   height: 100%;

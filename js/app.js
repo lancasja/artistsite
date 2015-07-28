@@ -132,7 +132,7 @@ app.factory('PhotoService', function() {
 app.directive('scrollFade', function($window) {
 	return {
 		restrict: 'A',
-		link: function(scope, element, attrs) {
+		link: function(scope, element) {
 
 			var bgPane = element[0].querySelector('.background-pane');
 			bgPane.style.opacity = 0;
@@ -141,6 +141,36 @@ app.directive('scrollFade', function($window) {
 				var val = ($window.scrollY/$window.innerHeight) >= 1 ? 1 : $window.scrollY/$window.innerHeight;
 				bgPane.style.opacity = val;
 			}
+		}
+	}
+});
+
+app.directive('animateToAnchor', function($window) {
+	return {
+		restrict: 'A',
+		link: function(scope, $elem, attrs) {
+			
+			var $target;
+			var scrollTo;
+			var sideDrawer = document.querySelector('side-drawer');
+
+			if (attrs.href) {
+				$target = $(attrs.href);
+			} else {
+				console.error('Need a target');
+			}
+
+			$elem.on('click', function(e) {
+				e.preventDefault();
+
+				$('html, body').animate({
+					scrollTop: $target.offset().top - 90
+				}, 'slow');
+
+				if (sideDrawer.classList.contains('open')) {
+					sideDrawer.classList.remove('open');
+				}
+			});
 		}
 	}
 });
