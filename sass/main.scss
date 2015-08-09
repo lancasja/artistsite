@@ -82,6 +82,11 @@ header {
 			text-align: center;
 			font-size: 1.5em;
 			text-shadow: 2px 2px 0px $redColor;
+
+			img {
+				max-height: $headerBgHeight / 2;
+				margin-top: 20px;
+			}
 		}
 	}
 }
@@ -145,7 +150,7 @@ section {
 		align-self: center;
 
 		h1 {
-			margin: 0;
+			margin: 0 0 -50px 0;
 		}
 
 		h1 + span {

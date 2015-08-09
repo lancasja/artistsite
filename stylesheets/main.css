@@ -80,14 +80,19 @@ header .background-pane .title {
   font-size: 1.5em;
   text-shadow: 2px 2px 0px #BB0C00;
 }
+/* line 86, ../sass/main.scss */
+header .background-pane .title img {
+  max-height: 40px;
+  margin-top: 20px;
+}
 
-/* line 89, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 section {
   width: 100%;
   padding-bottom: 80px;
 }
 
-/* line 94, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .page-title {
   text-align: center;
   font-size: 3em;
@@ -98,7 +103,7 @@ section {
 /* ================= */
 /* == MINI PLAYER == */
 /* ================= */
-/* line 105, ../sass/main.scss */
+/* line 110, ../sass/main.scss */
 .player-progress {
   position: absolute;
   top: 50%;
@@ -106,7 +111,7 @@ section {
   right: 1em;
   color: #fff;
 }
-/* line 110, ../sass/main.scss */
+/* line 115, ../sass/main.scss */
 .player-progress .play-button {
   position: absolute;
   top: 50%;
@@ -114,7 +119,7 @@ section {
   width: 100%;
   text-align: center;
 }
-/* line 116, ../sass/main.scss */
+/* line 121, ../sass/main.scss */
 .player-progress:hover {
   cursor: pointer;
 }
@@ -215,7 +220,7 @@ side-drawer.open {
 /* ================== */
 /* == HERO/LANDING == */
 /* ================== */
-/* line 130, ../sass/main.scss */
+/* line 135, ../sass/main.scss */
 .artist-hero {
   width: 100%;
   height: 100vh;
@@ -227,27 +232,27 @@ side-drawer.open {
   position: relative;
   transition: all 2s ease;
 }
-/* line 142, ../sass/main.scss */
+/* line 147, ../sass/main.scss */
 .artist-hero .artist-name {
   color: #fff;
   text-shadow: 2px 2px 0px #BB0C00;
   align-self: center;
 }
-/* line 147, ../sass/main.scss */
+/* line 152, ../sass/main.scss */
 .artist-hero .artist-name h1 {
-  margin: 0;
+  margin: 0 0 -50px 0;
 }
-/* line 151, ../sass/main.scss */
+/* line 156, ../sass/main.scss */
 .artist-hero .artist-name h1 + span {
   font-size: 1em !important;
 }
 @media screen and (min-width: 768px) {
-  /* line 151, ../sass/main.scss */
+  /* line 156, ../sass/main.scss */
   .artist-hero .artist-name h1 + span {
     font-size: 40px !important;
   }
 }
-/* line 161, ../sass/main.scss */
+/* line 166, ../sass/main.scss */
 .artist-hero .social-media {
   width: 100%;
   display: block;
@@ -255,7 +260,7 @@ side-drawer.open {
   left: 0;
   bottom: 0;
 }
-/* line 168, ../sass/main.scss */
+/* line 173, ../sass/main.scss */
 .artist-hero .social-media .to-next {
   display: block;
   position: absolute;
@@ -266,26 +271,26 @@ side-drawer.open {
   text-shadow: 0 0 0 #fff;
   cursor: pointer;
 }
-/* line 178, ../sass/main.scss */
+/* line 183, ../sass/main.scss */
 .artist-hero .social-media .to-next i {
   transition: all 0.4s ease;
 }
-/* line 182, ../sass/main.scss */
+/* line 187, ../sass/main.scss */
 .artist-hero .social-media .to-next:hover i {
   transform: scale(1.25);
 }
-/* line 187, ../sass/main.scss */
+/* line 192, ../sass/main.scss */
 .artist-hero .social-media li {
   text-align: center;
   display: inline-block;
 }
 @media screen and (max-width: 634px) {
-  /* line 187, ../sass/main.scss */
+  /* line 192, ../sass/main.scss */
   .artist-hero .social-media li {
     margin: 0.5em 0;
   }
 }
-/* line 195, ../sass/main.scss */
+/* line 200, ../sass/main.scss */
 .artist-hero .social-media li a {
   color: white;
   padding: 0 0.5em;
@@ -294,7 +299,7 @@ side-drawer.open {
   -webkit-transition: all 0.4s ease;
   font-size: 1.5em;
 }
-/* line 203, ../sass/main.scss */
+/* line 208, ../sass/main.scss */
 .artist-hero .social-media li a:hover {
   opacity: 1;
   text-shadow: 0px 0px 0px #BB0C00;
@@ -303,7 +308,7 @@ side-drawer.open {
 /* =================== */
 /* == MUSIC SECTION == */
 /* =================== */
-/* line 217, ../sass/main.scss */
+/* line 222, ../sass/main.scss */
 slick.albums .slick-arrow {
   position: absolute;
   top: 50%;
@@ -312,40 +317,40 @@ slick.albums .slick-arrow {
   cursor: pointer;
   z-index: 1;
 }
-/* line 226, ../sass/main.scss */
+/* line 231, ../sass/main.scss */
 slick.albums .arrow-left {
   left: 5%;
 }
 @media screen and (min-width: 1000px) {
-  /* line 226, ../sass/main.scss */
+  /* line 231, ../sass/main.scss */
   slick.albums .arrow-left {
     left: 15%;
   }
 }
-/* line 234, ../sass/main.scss */
+/* line 239, ../sass/main.scss */
 slick.albums .arrow-right {
   right: 5%;
 }
 @media screen and (min-width: 1000px) {
-  /* line 234, ../sass/main.scss */
+  /* line 239, ../sass/main.scss */
   slick.albums .arrow-right {
     right: 15%;
   }
 }
-/* line 244, ../sass/main.scss */
+/* line 249, ../sass/main.scss */
 slick.albums .album .container {
   margin: 0 auto;
   text-align: center;
   max-width: 680px;
 }
 @media screen and (min-width: 680px) {
-  /* line 244, ../sass/main.scss */
+  /* line 249, ../sass/main.scss */
   slick.albums .album .container {
     text-align: left;
     padding: 0 30px;
   }
 }
-/* line 254, ../sass/main.scss */
+/* line 259, ../sass/main.scss */
 slick.albums .album .container .artwork {
   width: 200px;
   height: 200px;
@@ -354,17 +359,17 @@ slick.albums .album .container .artwork {
   border-radius: 2px;
 }
 @media screen and (min-width: 680px) {
-  /* line 254, ../sass/main.scss */
+  /* line 259, ../sass/main.scss */
   slick.albums .album .container .artwork {
     float: left;
     margin-right: 40px;
   }
 }
-/* line 267, ../sass/main.scss */
+/* line 272, ../sass/main.scss */
 slick.albums .album .container > div, slick.albums .album .container .album-title, slick.albums .album .container .buy-link {
   margin: 0 0 10px 0;
 }
-/* line 271, ../sass/main.scss */
+/* line 276, ../sass/main.scss */
 slick.albums .album .container .buy-link {
   display: inline-block;
   margin-top: 30px;
@@ -375,7 +380,7 @@ slick.albums .album .container .buy-link {
   padding: 5px 0;
   color: #BB0C00;
 }
-/* line 282, ../sass/main.scss */
+/* line 287, ../sass/main.scss */
 slick.albums .album .container .track-count {
   width: 100%;
   float: left;
@@ -383,7 +388,7 @@ slick.albums .album .container .track-count {
   color: rgba(151, 151, 151, 0.4);
   margin: 30px 0;
 }
-/* line 290, ../sass/main.scss */
+/* line 295, ../sass/main.scss */
 slick.albums .album .container .album-tracks {
   margin: 0 auto;
   color: #4A4A4A;
@@ -394,26 +399,26 @@ slick.albums .album .container .album-tracks {
   -moz-column-fill: balance;
 }
 @media screen and (min-width: 680px) {
-  /* line 290, ../sass/main.scss */
+  /* line 295, ../sass/main.scss */
   slick.albums .album .container .album-tracks {
     float: left;
   }
 }
 @media screen and (min-width: 680px) {
-  /* line 304, ../sass/main.scss */
+  /* line 309, ../sass/main.scss */
   slick.albums .album .container .album-tracks ul {
     padding-left: 20px;
     border-left: 1px solid rgba(151, 151, 151, 0.4);
     margin-top: 0;
   }
 }
-/* line 311, ../sass/main.scss */
+/* line 316, ../sass/main.scss */
 slick.albums .album .container .album-tracks ul li {
   display: block;
   width: 300px;
   margin: 0 auto 10px;
 }
-/* line 316, ../sass/main.scss */
+/* line 321, ../sass/main.scss */
 slick.albums .album .container .album-tracks ul li span:nth-child(1) {
   display: inline-block;
   width: 30px;

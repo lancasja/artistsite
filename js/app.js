@@ -23,6 +23,7 @@ app.factory('ArtistService', function() {
 				tagLine: 'Songwriter, musician, composer', 
 				image: 'http://www.charlestonscoutdoors.com/wp-content/uploads/2012/02/IMG_0478.jpg',
 				bio: 'Joshua Redman is one of the most acclaimed and charismatic jazz artists to have emerged in the decade of the 1990s. Born in Berkeley, California, he is the son of legendary saxophonist Dewey Redman and dancer Renee Shedroff.',
+				logo: 'img/jody-logo.svg',
 				socialMediaLinks: [
 					{
 						service: 'spotify',
@@ -43,7 +44,7 @@ app.factory('ArtistService', function() {
 				],
 				albums: [
 					{
-						image: 'http://www.joshuaredman.com/sites/g/files/g2000002901/f/styles/media_gallery_large/public/201304/walking-shadows.jpg',
+						image: 'https://c2.staticflickr.com/4/3888/15032735565_c411a287c9_b.jpg',
 						title: 'Found My Place',
 						artists: [
 							'Jody Calcara'
@@ -69,52 +70,84 @@ app.factory('ArtistService', function() {
 app.factory('PhotoService', function() {
 	var photos = [
 		{
-			name: 'Pleasure Boy',
-			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
+			name: 'Chick Susan',
+			source: 'img/chick-susan.jpg'
 		},
 		{
-			name: 'Pleasure Boy',
-			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
+			name: 'Drummer in D',
+			source: 'img/drummer-in-d.jpg'
 		},
 		{
-			name: 'Platypus',
-			source: 'http://images.nationalgeographic.com/wpf/media-live/photos/000/006/cache/platypus_662_600x450.jpg'
+			name: 'Dundee with a Guitar',
+			source: 'img/dundee-thumb.jpg'
 		},
 		{
-			name: 'Bilbo',
-			source: 'http://gifts.worldwildlife.org/gift-center/Images/large-species-photo/large-Duck-billed-Platypus-photo.jpg'
+			name: 'Dundee and Friend',
+			source: 'img/dundee02-thumb.jpg'
 		},
 		{
-			name: 'Pleasure Boy',
-			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
+			name: 'Girl on Sax',
+			source: 'img/girl-sax.jpg'
 		},
 		{
-			name: 'Pleasure Boy',
-			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
+			name: 'High School Reunion',
+			source: 'img/hs-reunion.jpg'
 		},
 		{
-			name: 'Platypus',
-			source: 'http://images.nationalgeographic.com/wpf/media-live/photos/000/006/cache/platypus_662_600x450.jpg'
+			name: 'Jody White Wall',
+			source: 'img/jody00-thumb.jpg'
 		},
 		{
-			name: 'Bilbo',
-			source: 'http://gifts.worldwildlife.org/gift-center/Images/large-species-photo/large-Duck-billed-Platypus-photo.jpg'
+			name: 'Jody on a Boat',
+			source: 'img/jody01-thumb.jpg'
 		},
 		{
-			name: 'Pleasure Boy',
-			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
+			name: 'Jody Brick Wall',
+			source: 'img/jody1.jpg'
 		},
 		{
-			name: 'Pleasure Boy',
-			source: 'http://assets3.thefourohfive.com/data/33031/medium_picture/pleasure-boy.jpg'
+			name: 'Jody on Stage',
+			source: 'img/jody02-thumb.jpg'
 		},
 		{
-			name: 'Platypus',
-			source: 'http://images.nationalgeographic.com/wpf/media-live/photos/000/006/cache/platypus_662_600x450.jpg'
+			name: 'Jody Abstract',
+			source: 'img/jody03-thumb.jpg'
 		},
 		{
-			name: 'Bilbo',
-			source: 'http://gifts.worldwildlife.org/gift-center/Images/large-species-photo/large-Duck-billed-Platypus-photo.jpg'
+			name: 'Joel on Acoustic Guitar',
+			source: 'img/joel-acoustic.jpg'
+		},
+		{
+			name: 'Maya Filtered',
+			source: 'img/maya-filter.jpg'
+		},
+		{
+			name: 'Headshot of Maya',
+			source: 'img/maya-headshot.jpg'
+		},
+		{
+			name: 'Maya and Jack',
+			source: 'img/maya-jack.jpg'
+		},
+		{
+			name: 'Nathan on Drums',
+			source: 'img/nathan-drums.jpg'
+		},
+		{
+			name: 'Pelican Beach',
+			source: 'img/pelican-beach.jpg'
+		},
+		{
+			name: 'Prarie and All',
+			source: 'img/pp-and-all.jpg'
+		},
+		{
+			name: 'Prarie and all again',
+			source: 'img/pp-rh-jc-cvs.jpg'
+		},
+		{
+			name: 'Tattered Moon',
+			source: 'img/tattered-moon.jpg'
 		}
 	];
 
@@ -210,6 +243,7 @@ app.directive('sideDrawerToggle', function () {
 
 app.controller('HeaderController', function($scope, ArtistService) {
 	$scope.title = ArtistService.getArtist().name;
+	$scope.logo = ArtistService.getArtist().logo;
 });
 
 
