@@ -20,8 +20,8 @@ app.factory('ArtistService', function() {
 		getArtist: function() {
 			return {
 				name: 'Jody Calcara',
-				tagLine: 'Songwriter, musician, composer', 
-				image: 'http://www.charlestonscoutdoors.com/wp-content/uploads/2012/02/IMG_0478.jpg',
+				tagLine: 'Singer, Songwriter', 
+				image: 'img/photo_do.png',
 				bio: 'Joshua Redman is one of the most acclaimed and charismatic jazz artists to have emerged in the decade of the 1990s. Born in Berkeley, California, he is the son of legendary saxophonist Dewey Redman and dancer Renee Shedroff.',
 				logo: 'img/jody-logo.svg',
 				socialMediaLinks: [
@@ -44,7 +44,7 @@ app.factory('ArtistService', function() {
 				],
 				albums: [
 					{
-						image: 'https://c2.staticflickr.com/4/3888/15032735565_c411a287c9_b.jpg',
+						image: 'img/found-myplace-album.jpg',
 						title: 'Found My Place',
 						artists: [
 							'Jody Calcara'
@@ -70,64 +70,80 @@ app.factory('ArtistService', function() {
 app.factory('PhotoService', function() {
 	var photos = [
 		{
-			name: 'Chick Susan',
-			source: 'img/chick-susan.jpg'
-		},
-		{
-			name: 'Drummer in D',
-			source: 'img/drummer-in-d.jpg'
-		},
-		{
-			name: 'Dundee with a Guitar',
+			name: 'Dundee, Co-Producer',
 			source: 'img/dundee-thumb.jpg'
 		},
 		{
-			name: 'Dundee and Friend',
-			source: 'img/dundee02-thumb.jpg'
+			name: 'Chick Peetersen',
+			source: 'img/chick-peetersen.jpg'
 		},
 		{
-			name: 'Girl on Sax',
+			name: 'Does he have to play those high notes?',
+			source: 'img/does-he-have-to-play-those-high-notes.jpg'
+		},
+		{
+			name: 'Dundee on backup vocals',
+			source: 'img/dundee-on-backup-vocals.jpg'
+		},
+		{
+			name: '',
+			source: 'img/jc-00.jpg'
+		},
+		{
+			name: '',
+			source: 'img/jc-01.jpg'
+		},
+		{
+			name: '',
+			source: 'img/jc-02.jpg'
+		},
+		{
+			name: '',
+			source: 'img/jc-03.jpg'
+		},
+		{
+			name: 'Joel Lindheimer',
+			source: 'img/joel-lindheimer.jpg'
+		},
+		{
+			name: 'Prarie Prince',
+			source: 'img/prarie-prince.jpg'
+		},
+		{
+			name: 'Robert Ogden & Bryna Hubbs',
+			source: 'img/robert-ogden-bryna-hubbs.jpg'
+		},
+		{
+			name: 'Saxy Susan Copperman',
 			source: 'img/girl-sax.jpg'
 		},
 		{
-			name: 'High School Reunion',
-			source: 'img/hs-reunion.jpg'
-		},
-		{
-			name: 'Jody White Wall',
+			name: '',
 			source: 'img/jody00-thumb.jpg'
 		},
 		{
-			name: 'Jody on a Boat',
-			source: 'img/jody01-thumb.jpg'
+			name: 'Richard Howell, Prarie Prince, JC, Chris Von Sneidern',
+			source: 'img/pp-rh-jc-cvs.jpg'
 		},
 		{
-			name: 'Jody Brick Wall',
+			name: '',
 			source: 'img/jody1.jpg'
 		},
 		{
-			name: 'Jody on Stage',
-			source: 'img/jody02-thumb.jpg'
-		},
-		{
-			name: 'Jody Abstract',
+			name: '',
 			source: 'img/jody03-thumb.jpg'
 		},
 		{
-			name: 'Joel on Acoustic Guitar',
+			name: 'Joel Lindheimer',
 			source: 'img/joel-acoustic.jpg'
 		},
 		{
-			name: 'Maya Filtered',
+			name: 'Maya Daniels',
 			source: 'img/maya-filter.jpg'
 		},
 		{
-			name: 'Headshot of Maya',
+			name: 'Maya Daniels',
 			source: 'img/maya-headshot.jpg'
-		},
-		{
-			name: 'Maya and Jack',
-			source: 'img/maya-jack.jpg'
 		},
 		{
 			name: 'Nathan on Drums',
@@ -138,16 +154,8 @@ app.factory('PhotoService', function() {
 			source: 'img/pelican-beach.jpg'
 		},
 		{
-			name: 'Prarie and All',
+			name: 'Richard Howell, Prarie Prince, JC, Chris Von Sneidern',
 			source: 'img/pp-and-all.jpg'
-		},
-		{
-			name: 'Prarie and all again',
-			source: 'img/pp-rh-jc-cvs.jpg'
-		},
-		{
-			name: 'Tattered Moon',
-			source: 'img/tattered-moon.jpg'
 		}
 	];
 
@@ -348,9 +356,6 @@ app.controller('VideoSectionController', function($scope) {
 	$scope.videos = [
 		{
 			src: "2_t0ffY3JvE",
-		},
-		{
-			src: "Y7d42LJfkqQ"
 		}
 	];
 
@@ -361,27 +366,3 @@ app.controller('VideoSectionController', function($scope) {
 	$scope.featured = $scope.videos[0].src;
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
