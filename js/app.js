@@ -1,15 +1,17 @@
 var app = angular.module('artistApp', [
 	'ngFitText',
-	'angular-svg-round-progress',
 	'slick',
-	'ngFlowGrid'
+	'ngFlowGrid',
+	'plangular'
 ]);
 
-app.config(function($sceDelegateProvider) {
+app.config(function($sceDelegateProvider, plangularConfigProvider) {
 	$sceDelegateProvider.resourceUrlWhitelist([
 		'self',
 		'https://www.youtube.com/**'
 		]);
+
+	plangularConfigProvider.clientId = '';
 });
 /* ============== */
 /* == SERVICES == */
@@ -44,7 +46,7 @@ app.factory('ArtistService', function() {
 				],
 				albums: [
 					{
-						image: 'img/found-myplace-album.jpg',
+						image: 'img/found-my-place-album-cover.jpg',
 						title: 'Found My Place',
 						artists: [
 							'Jody Calcara'
@@ -94,6 +96,53 @@ app.factory('PhotoService', function() {
 			source: 'img/jc-01.jpg'
 		},
 		{
+			name: 'A young Ele Howell with the great drummer Elvin Jones',
+			source: 'img/a-young-ele-howell-with-the-great-drummer-elvin-jones.jpg'
+
+		},
+		{
+			name: 'Jack Kertzman (Engineer), Dundee (Assistant)',
+			source: 'img/jack-kertzman-engineer-dundee-musician.jpg'
+		},
+		{
+			name: 'Chick and Joel',
+			source: 'img/chick-and-joel.jpg'
+
+		},
+		{
+			name: 'Ele and Richard Howell',
+			source: 'img/ele-and-richard-howell.jpg'
+
+		},
+		{
+			name: 'Ele Howell',
+			source: 'img/ele-howell.jpg'
+
+		},
+		{
+			name: '',
+			source: 'img/jc-0.jpg'
+
+		},
+		{
+			name: 'Jerry Pellizzer',
+			source: 'img/jerry-pellizzer.jpg'
+
+		},
+		{
+			name: 'Robert editing footage',
+			source: 'img/robert-editing-footage.jpg'
+
+		},
+		{
+			name: 'Susan Copperman',
+			source: 'img/susan-copperman.jpg'
+		},
+		{
+			name: 'Tom Pellizzer',
+			source: 'img/tom-pellizzer.jpg'
+		},
+		{
 			name: '',
 			source: 'img/jc-02.jpg'
 		},
@@ -114,7 +163,7 @@ app.factory('PhotoService', function() {
 			source: 'img/robert-ogden-bryna-hubbs.jpg'
 		},
 		{
-			name: 'Saxy Susan Copperman',
+			name: 'Susan Copperman',
 			source: 'img/girl-sax.jpg'
 		},
 		{
@@ -146,12 +195,8 @@ app.factory('PhotoService', function() {
 			source: 'img/maya-headshot.jpg'
 		},
 		{
-			name: 'Nathan on Drums',
+			name: 'Nathan Winter',
 			source: 'img/nathan-drums.jpg'
-		},
-		{
-			name: 'Pelican Beach',
-			source: 'img/pelican-beach.jpg'
 		},
 		{
 			name: 'Richard Howell, Prarie Prince, JC, Chris Von Sneidern',
@@ -355,7 +400,7 @@ app.controller('VideoSectionController', function($scope) {
 
 	$scope.videos = [
 		{
-			src: "2_t0ffY3JvE",
+			src: "_FhJMhDOo24",
 		}
 	];
 
@@ -366,3 +411,44 @@ app.controller('VideoSectionController', function($scope) {
 	$scope.featured = $scope.videos[0].src;
 
 });
+
+
+
+
+app.controller('FooterController', function($scope, ArtistService, PhotoService) {
+	var artist = ArtistService.getArtist();
+	$scope.socialLinks = artist.socialMediaLinks;
+	$scope.photo = artist.image;
+
+	
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

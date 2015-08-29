@@ -21,5 +21,8 @@
     "angular-audio": "~1.6.2",
     "angular-slick": "~0.2.1",
     "font-awesome": "~4.3.0"
+  },
+  "devDependencies": {
+    "plangular": "~3.1.2"
   }
 }
