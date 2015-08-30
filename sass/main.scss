@@ -1,7 +1,7 @@
 /* =============== */
 /* == VARIABLES == */
 /* =============== */
-$headerBgHeight: 80px;
+$headerBgHeight: 60px;
 $redColor: #BB0C00;
 $textColor: #4A4A4A;
 $albumBreak: 680px;
@@ -22,6 +22,7 @@ $albumBreak: 680px;
 }
 
 @import "globals";
+@import "header";
 @import "side-drawer";
 @import "landing-page";
 @import "music-section";

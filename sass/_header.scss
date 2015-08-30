@@ -1,0 +1,37 @@
+header {
+	width: 100%;
+	height: $headerBgHeight;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+  
+  @media screen and (max-width: 440px) {
+    margin-top: -18px;  
+  }
+
+	.background-pane {
+		display: flex;
+		flex-flow: center;
+		align-items: center;
+		align-content: center;
+		width: 100%;
+		height: $headerBgHeight;
+		background-color: #000;
+		opacity: 1;
+		color: #fff;
+
+		.title {
+			flex-grow: 1;
+			text-align: center;
+			font-size: 1.5em;
+			text-shadow: 2px 2px 0px $redColor;
+
+			img {
+				max-height: $headerBgHeight / 2;
+				margin-top: 20px;
+			}
+		}
+	}
+}

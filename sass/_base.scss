@@ -1,0 +1,39 @@
+/* ========== */
+/* == BASE == */
+/* ========== */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+hr {
+	border: none;
+	height: 4px;
+	background: rgba(50, 50, 50, 0.15);
+	border-radius: 50%;
+	width: 80%;
+}

@@ -2,9 +2,10 @@
 	color: #fff;
 	display: block;
 	cursor: pointer;
-	opacity: 0.5;
+	opacity: 0.6;
 	transition: all 0.3s ease;
-	position: absolute;
+	position: fixed;
+	z-index: 9;
 
 	&:hover {
 		opacity: 0.8;
@@ -16,13 +17,26 @@
 	}
 
 	&.open {
+		top: 16px;
 		left: 27px;
-		@include v-center;
+		font-size: 1.5em;
 	}
 }
 
 side-drawer {
-
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 300px;
+	height: 100vh;
+	background: rgba(50, 50, 50, 0.9);
+	color: #fff;
+	z-index: 4;
+	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.36);
+	transform: translateX(-300px);
+	opacity: 0;
+	pointer-events: none;
+	
 	&::before {
 		content: "";
 		position: fixed;
@@ -35,21 +49,6 @@ side-drawer {
 		height: 100%;
 		z-index: -1;
 	}
-
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 300px;
-	height: 100vh;
-	background: rgba(50, 50, 50, 0.9);
-	color: #fff;
-	z-index: 4;
-
-	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.36);
-	
-	// Amimate
-	transform: translateX(-300px);
-	opacity: 0;
 	
 	transition: all 0.5s ease;
 }
@@ -57,11 +56,12 @@ side-drawer {
 side-drawer.open {
 	transform: translateX(0px);
 	opacity: 1;
+	pointer-events: auto;
 }
 
 .side-drawer-content {
 	width: 100%;
-	@include v-center;
+	@include v-center(-10%);
 
 	h2 {
 		margin-left: 18px;

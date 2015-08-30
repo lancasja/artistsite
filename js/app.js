@@ -27,20 +27,12 @@ app.factory('ArtistService', function() {
 				logo: 'img/jody-logo.svg',
 				socialMediaLinks: [
 					{
-						service: 'spotify',
-						url: 'http://spotify.com'
-					},
-					{
-						service: 'soundcloud',
-						url: 'http://soundcloud.com'
-					},
-					{
 						service: 'facebook',
-						url: 'http://facebook.com'
+						url: 'https://www.facebook.com/jodycalcaramusic'
 					},
 					{
 						service: 'youtube',
-						url: 'http://youtube.com'
+						url: 'https://www.youtube.com/watch?v=_FhJMhDOo24'
 					}
 				],
 				albums: [
