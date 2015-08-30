@@ -27,27 +27,18 @@
 	<script src="//use.typekit.net/int8rcd.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 
-	<!-- jQuery -->
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-
 	<!-- Angular -->
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-animate/angular-animate.js"></script>
 
+	<!-- jQuery -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	
 	<!-- Fittext -->
 	<script src="bower_components/ngFitText/src/ng-FitText.js"></script>
 
-	<!-- Slick Carousel -->
-	<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
-
-	<!-- Angular Slick -->
-	<script src="bower_components/angular-slick/dist/slick.min.js"></script>
-
 	<!-- FlowGrid -->
 	<script src="lib/ngFlowGrid.js"></script>
-
-	<!-- Plangular (Custom Soundcloud Player) -->
-	<script src="bower_components/plangular/dist/plangular.min.js"></script>
 	
 	<!-- Main JS File -->
 	<script src="js/app.js"></script>
@@ -153,15 +144,15 @@
 				<h2>{{modalName}}</h2>
 
 				<span class="modal-next" ng-click="nextPhoto()">
-					Next
+					<i class="fa fa-chevron-right fa-2x"></i>
 				</span>
 
 				<span class="modal-prev" ng-click="prevPhoto()">
-					Prev
+					<i class="fa fa-chevron-left fa-2x"></i>
 				</span>
 
 				<span class="modal-close" ng-click="dismissModal()">
-					Close
+					<i class="fa fa-close fa-2x"></i>
 				</span>
 
 			</div>

@@ -3,8 +3,8 @@
 /* =================== */
 
 #album-section {
-	padding-bottom: 80px;
 	position: relative;
+	padding-bottom: 80px;
 	
 	&::after {
 		content: '';
@@ -24,7 +24,8 @@
 	.cdb-player {
 		max-width: 1000px;
 		max-height:785px;
-		z-index: 6;
+		margin: 0 auto;
+		z-index: 4;
 		
 		.player-inner {
 			position: relative;

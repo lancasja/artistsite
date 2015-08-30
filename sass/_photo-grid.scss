@@ -61,19 +61,23 @@
 	padding-right: 10px;
 }
 
+/* ================= */
+/* == PHOTO MODAL == */
+/* ================= */
+
 .fg-modal {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.6);
 	z-index: 9999;
 	display: none;
 
 	.modal-frame {
-		background: #fff;
-		overflow: hidden;
+		background: #111;
+		// overflow: hidden;
 		border-radius: 7px;
 		box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.36);
 		position: relative;
@@ -81,36 +85,47 @@
 		img {
 			display: block;
 			height: 500px;
+			max-width: 100%;
+			margin: 0 auto;
 		}
 
 		h2 {
+			display: block;
+			width: 100%;
+			margin: 0 auto;
 			text-align: center;
+			font-size: 18px;
+			background: #fff;
+			padding: 12px;
 		}
 
 		.modal-next {
-			color: #fff;
-			text-align: center;
-			width: 100px;
-			height: 30px;
-			background: rgba(0, 0, 0, 0.7);
-			line-height: 30px;
-			display: block;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-			right: 0;
+			right: -60px;
+			color: #fff;
 			cursor: pointer;
+			opacity: 0.6;
 		}
 
 		.modal-prev {
-			@extend .modal-next;
-			right: none;
-			left: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -60px;
+			color: #fff;
+			cursor: pointer;
+			opacity: 0.6;
 		}
 
 		.modal-close {
-			@extend .modal-next;
-			top: 20px;
+			position: absolute;
+			top: -40px;
+			right: -40px;
+			color: #fff;
+			cursor: pointer;
+			opacity: 0.6;
 		}
 	}
 }

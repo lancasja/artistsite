@@ -1,16 +1,13 @@
 var app = angular.module('artistApp', [
 	'ngFitText',
-	'ngFlowGrid',
-	'plangular'
+	'ngFlowGrid'
 ]);
 
-app.config(function($sceDelegateProvider, plangularConfigProvider) {
+app.config(function($sceDelegateProvider) {
 	$sceDelegateProvider.resourceUrlWhitelist([
 		'self',
 		'https://www.youtube.com/**'
 		]);
-
-	plangularConfigProvider.clientId = '';
 });
 /* ============== */
 /* == SERVICES == */
@@ -23,7 +20,6 @@ app.factory('ArtistService', function() {
 				name: 'Jody Calcara',
 				tagLine: 'Singer, Songwriter', 
 				image: 'img/photo_do.png',
-				bio: 'Joshua Redman is one of the most acclaimed and charismatic jazz artists to have emerged in the decade of the 1990s. Born in Berkeley, California, he is the son of legendary saxophonist Dewey Redman and dancer Renee Shedroff.',
 				logo: 'img/jody-logo.svg',
 				socialMediaLinks: [
 					{
@@ -124,6 +120,10 @@ app.factory('PhotoService', function() {
 			name: 'Robert editing footage',
 			source: 'img/robert-editing-footage.jpg'
 
+		},
+		{
+			name: 'Jody & Dundee',
+			source: 'img/landing-background.jpg'
 		},
 		{
 			name: 'Susan Copperman',
@@ -310,7 +310,7 @@ app.controller('MusicSectionController', function($scope, $window, $sce) {
 	
 	var playerType;
 	
-	if (angular.element($window).innerWidth() > 768) {
+	if ($window.innerWidth > 768) {
 		playerType = 'full';
 	}
 	
@@ -355,6 +355,7 @@ app.controller('PhotoSectionController', function($scope, PhotoService, fgDelega
 		}
 
 		$scope.modalImg = $scope.photos[currentPhoto].source;
+		$scope.modalName = $scope.photos[currentPhoto].name;
 	}
 
 	$scope.prevPhoto = function() {
@@ -369,6 +370,7 @@ app.controller('PhotoSectionController', function($scope, PhotoService, fgDelega
 		}
 
 		$scope.modalImg = $scope.photos[currentPhoto].source;
+		$scope.modalName = $scope.photos[currentPhoto].name;
 	}
 
 	$scope.dismissModal = function() {

@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Jody Calcara</title>
+
+	<!-- ================= -->
+	<!-- == STYLESHEETS == -->
+	<!-- ================= -->
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="bower_components/animate.css/animate.css">	
+
+	<!-- Slick -->
+	<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="stylesheets/main.css">
+
+	<!-- ============= -->
+	<!-- == SCRIPTS == -->
+	<!-- ============= -->
+	
+	<!-- Typekit -->
+	<script src="//use.typekit.net/int8rcd.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+	<!-- jQuery -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+	<!-- Angular -->
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+
+	<!-- Fittext -->
+	<script src="bower_components/ngFitText/src/ng-FitText.js"></script>
+
+	<!-- Slick Carousel -->
+	<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+
+	<!-- Angular Slick -->
+	<script src="bower_components/angular-slick/dist/slick.min.js"></script>
+
+	<!-- FlowGrid -->
+	<script src="lib/ngFlowGrid.js"></script>
+
+	<!-- Plangular (Custom Soundcloud Player) -->
+	<script src="bower_components/plangular/dist/plangular.min.js"></script>
+	
+	<!-- Main JS File -->
+	<script src="js/app.js"></script>
+</head>
+<body ng-app="artistApp">
+
+	<side-drawer class="">
+
+		<a class="menu-button close" side-drawer-toggle>
+			<i class="fa fa-close fa-2x"></i>
+		</a>
+
+		<div class="side-drawer-content">
+			<!-- <h2>Sidedrawer Title</h2> -->
+
+			<ul class="side-drawer-links">
+				<li><a href="#landing-section" animate-to-anchor>Home</a></li>
+				<li><a href="#album-section" animate-to-anchor>Albums</a></li>
+				<li><a href="#photo-section" animate-to-anchor>Photos</a></li>
+				<li><a href="#video-section" animate-to-anchor>Videos</a></li>
+				<li><a href="#contact-footer" animate-to-anchor>Contact</a></li>
+			</ul>
+		</div>
+	</side-drawer>
+
+	<header ng-controller="HeaderController" scroll-fade>
+
+		<div class="background-pane">
+			<h1 class="title tk-estilo-pro">
+				<img ng-src="{{logo}}" alt="title">
+			</h1>
+		</div>
+
+		<a class="menu-button open" side-drawer-toggle>
+			<i class="fa fa-bars fa-2x"></i>
+		</a>
+	</header>
+
+
+
+	<!-- LANDING/HOME -->
+	<section id="landing-section" class="artist-hero" style="background-image: url({{artist.image}});" ng-controller="ArtistController">
+
+		<div class="landing-overlay"></div>
+
+		<div class="artist-name tk-estilo-pro animated" ng-init="fadeInTitle()">
+			<h1>
+				<img ng-src="{{artist.logo}}" alt="{{artist.name}}">
+			</h1>
+			<span>
+				{{artist.tagLine}}
+			</span>
+		</div>
+
+		<div class="social-media">
+			<a class="to-next">
+				<i class="fa fa-chevron-down fa-2x"></i>
+			</a>
+			
+			<!-- [Component] Social Media -->
+			<ul>
+				<li ng-repeat="link in artist.socialMediaLinks">
+					<a href="{{link.url}}" target="_blank">
+						<i class="fa fa-{{link.service}}"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- ALBUMS -->
+	<section id="album-section" class="music-section tk-proxima-nova" ng-controller="MusicSectionController">
+		<h1 class="page-title tk-estilo-pro">Music</h1>
+
+		<div class="embeded-player">
+			<iframe name="full" src="http://widget.cdbaby.com/cf949146-4936-43f2-9b76-9f11c51f95ee/full/light/opaque"></iframe>
+		</div>
+
+		<!--
+		<slick class="albums"
+			accessibility="true"
+			center-mode="true"
+			slides-to-show="1"
+			mobile-first="true"
+			prev-arrow="#slickLeftArrow"
+			next-arrow="#slickRightArrow"
+			>
+			
+			<span id="slickLeftArrow" class="slick-arrow arrow-left">
+				<i class="fa fa-angle-left fa-3x"></i>
+			</span>
+
+			<span id="slickRightArrow" class="slick-arrow arrow-right">
+				<i class="fa fa-angle-right fa-3x"></i>
+			</span>
+
+			<div class="album">
+				<div class="container">
+
+					<img class="artwork" ng-src="{{albums[0].image}}">
+
+					<h2 class="album-title">{{albums[0].title}}</h2>
+
+					<div class="album-artists">
+						<span>{{albums[0].artists[0]}}</span>
+					</div>
+
+					<div>{{albums[0].year}}</div>
+
+					<a class="buy-link" href="{{albums[0].buyLink}}" target="_blank">Buy Now</a>
+
+					<div class="track-count">12 Tracks</div>
+
+					<div class="album-tracks">
+						<ul>
+							<li ng-repeat="track in albums[0].tracks">
+								<span>{{$index + 1}}.</span>
+								<span>{{track}}</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="album">
+				<div class="container" style="text-align: center;">2</div>
+			</div>
+
+			<div class="album">
+				<div class="container" style="text-align: center;">3</div>
+			</div>
+
+		</slick>
+		-->
+	</section>
+
+
+	<!-- PHOTOS -->
+	<section id="photo-section" class="photo-section tk-proxima-nova" ng-controller="PhotoSectionController">
+		
+		<h1 class="page-title tk-estilo-pro">Photos</h1>
+
+		<ul class="flowGrid" ng-flow-grid="photoGrid" min-item-width="200">
+			<li class="flowGridItem" ng-repeat="photo in photos" ng-click="showModal($index)">
+				<a href="">
+					<img ng-src="{{photo.source}}" alt="{{photo.name}}">
+				</a>
+				<div class="caption">
+					<h2>
+						{{photo.name}}
+					</h2>
+				</div>
+			</li>
+		</ul>
+
+		<div class="fg-modal">
+
+			<div class="modal-frame">
+				
+				<img ng-src="{{modalImg}}">
+				<h2>{{modalName}}</h2>
+
+				<span class="modal-next" ng-click="nextPhoto()">
+					Next
+				</span>
+
+				<span class="modal-prev" ng-click="prevPhoto()">
+					Prev
+				</span>
+
+				<span class="modal-close" ng-click="dismissModal()">
+					Close
+				</span>
+
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- VIDEO SECTION -->
+	<section id="video-section" class="video-section tk-proxima-nova" ng-controller="VideoSectionController">
+		<h1 class="page-title tk-estilo-pro">Videos</h1>
+
+		<div class="video-grid">
+
+			<div class="video-cell" ng-repeat="video in videos">
+				<iframe allowfullscreen="allowfullscreen" ng-src="{{getIframeSrc(video.src)}}"></iframe>
+			</div>
+		</div>
+	</section>
+
+	<footer ng-controller="FooterController">
+
+		<!--
+		<div class="about">
+
+			<div class="bio">
+				<h2>About</h2>
+
+				<p>Denim motion BASE jump receding tower pistol wristwatch computer claymore mine. Neon bicycle-ware ablative euro-pop towards urban augmented reality disposable hacker cyber-bridge tattoo denim. Papier-mache dead claymore mine media sensory dolphin sunglasses nodality chrome network uplink rifle urban drugs euro-pop human. Tower carbon neon jeans grenade 3D-printed office warehouse euro-pop render-farm geodesic assault. Spook cartel bicycle tube vinyl denim footage A.I. tattoo pre-sprawl pistol garage pen rebar. Apophenia shoes marketing chrome meta-San Francisco cardboard gang concrete assault.</p>
+			</div>
+
+			<div class="photo">
+				<img ng-src="{{photo}}" />
+			</div>
+		</div>
+		-->
+		<div class="contact">
+			<span ng-repeat="link in socialLinks">
+				<i class="fa fa-{{link.service}}"></li>
+			</span>
+		</div>
+
+		<div class="legal">
+			<p>Jody Calcara &copy;2015, All rights reserved.</p>
+		</div>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

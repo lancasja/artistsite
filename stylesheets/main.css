@@ -69,7 +69,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 5;
 }
 @media screen and (max-width: 440px) {
   /* line 1, ../sass/_header.scss */
@@ -307,8 +307,8 @@ side-drawer.open {
 /* =================== */
 /* line 5, ../sass/_music-section.scss */
 #album-section {
-  padding-bottom: 80px;
   position: relative;
+  padding-bottom: 80px;
 }
 /* line 9, ../sass/_music-section.scss */
 #album-section::after {
@@ -329,9 +329,10 @@ side-drawer.open {
 #album-section .cdb-player {
   max-width: 1000px;
   max-height: 785px;
-  z-index: 6;
+  margin: 0 auto;
+  z-index: 4;
 }
-/* line 29, ../sass/_music-section.scss */
+/* line 30, ../sass/_music-section.scss */
 #album-section .cdb-player .player-inner {
   position: relative;
   height: 0;
@@ -339,7 +340,7 @@ side-drawer.open {
   padding-bottom: 100%;
   padding-top: 200px;
 }
-/* line 36, ../sass/_music-section.scss */
+/* line 37, ../sass/_music-section.scss */
 #album-section .cdb-player .player-inner iframe {
   position: absolute;
   top: 0px;
@@ -411,65 +412,80 @@ side-drawer.open {
   padding-right: 10px;
 }
 
-/* line 64, ../sass/_photo-grid.scss */
+/* ================= */
+/* == PHOTO MODAL == */
+/* ================= */
+/* line 68, ../sass/_photo-grid.scss */
 .fg-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 9999;
   display: none;
 }
-/* line 74, ../sass/_photo-grid.scss */
+/* line 78, ../sass/_photo-grid.scss */
 .fg-modal .modal-frame {
-  background: #fff;
-  overflow: hidden;
+  background: #111;
   border-radius: 7px;
   box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.36);
   position: relative;
 }
-/* line 81, ../sass/_photo-grid.scss */
+/* line 85, ../sass/_photo-grid.scss */
 .fg-modal .modal-frame img {
   display: block;
   height: 500px;
+  max-width: 100%;
+  margin: 0 auto;
 }
-/* line 86, ../sass/_photo-grid.scss */
+/* line 92, ../sass/_photo-grid.scss */
 .fg-modal .modal-frame h2 {
-  text-align: center;
-}
-/* line 90, ../sass/_photo-grid.scss */
-.fg-modal .modal-frame .modal-next, .fg-modal .modal-frame .modal-prev, .fg-modal .modal-frame .modal-close {
-  color: #fff;
-  text-align: center;
-  width: 100px;
-  height: 30px;
-  background: rgba(0, 0, 0, 0.7);
-  line-height: 30px;
   display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  padding: 12px;
+}
+/* line 102, ../sass/_photo-grid.scss */
+.fg-modal .modal-frame .modal-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
+  right: -60px;
+  color: #fff;
   cursor: pointer;
+  opacity: 0.6;
 }
-/* line 105, ../sass/_photo-grid.scss */
+/* line 112, ../sass/_photo-grid.scss */
 .fg-modal .modal-frame .modal-prev {
-  right: none;
-  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.6;
 }
-/* line 111, ../sass/_photo-grid.scss */
+/* line 122, ../sass/_photo-grid.scss */
 .fg-modal .modal-frame .modal-close {
-  top: 20px;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.6;
 }
 
-/* line 118, ../sass/_photo-grid.scss */
+/* line 133, ../sass/_photo-grid.scss */
 .noscroll {
   overflow: hidden;
 }
 
-/* line 122, ../sass/_photo-grid.scss */
+/* line 137, ../sass/_photo-grid.scss */
 .modal-open {
   display: flex;
   justify-content: center;
