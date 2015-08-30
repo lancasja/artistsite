@@ -1,6 +1,5 @@
 var app = angular.module('artistApp', [
 	'ngFitText',
-	'slick',
 	'ngFlowGrid',
 	'plangular'
 ]);
@@ -299,10 +298,6 @@ app.controller('HeaderController', function($scope, ArtistService) {
 	$scope.logo = ArtistService.getArtist().logo;
 });
 
-
-
-
-
 app.controller('ArtistController', function($scope, ArtistService) {
 
 	// Run when controller is initialized, fade the title in
@@ -319,27 +314,21 @@ app.controller('ArtistController', function($scope, ArtistService) {
 	$scope.artist = ArtistService.getArtist();
 });
 
-
-
-
-
-app.controller('MiniPlayerController', function($scope) {
-	$scope.playing = false;
-
-	$scope.playPause = function() {
-		$scope.playing = !$scope.playing;
-	};
-
-	$scope.max = 100;
-	$scope.progress = 25;
-});
-
-
-
-
-
-app.controller('MusicSectionController', function($scope, ArtistService) {
-	$scope.albums = ArtistService.getArtist().albums;
+app.controller('MusicSectionController', function($scope, $window, $sce) {
+	
+	var playerType;
+	
+	if (angular.element($window).innerWidth() > 768) {
+		playerType = 'full';
+	}
+	
+	else {
+		playerType = 'album';
+	}
+	
+	var playerUrl = 'http://widget.cdbaby.com/cf949146-4936-43f2-9b76-9f11c51f95ee/' + playerType + '/light/opaque';
+	
+	$scope.playerType = $sce.trustAsResourceUrl(playerUrl);
 });
 
 

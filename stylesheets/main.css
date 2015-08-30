@@ -7,42 +7,41 @@
 /* ============ */
 /* == GLOBAL == */
 /* ============ */
-/* line 28, ../sass/main.scss */
+/* line 5, ../sass/_globals.scss */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* line 32, ../sass/main.scss */
+/* line 9, ../sass/_globals.scss */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
 }
 
-/* line 39, ../sass/main.scss */
+/* line 15, ../sass/_globals.scss */
 body {
   font-family: sans-serif;
   font-size: 18px;
 }
 
-/* line 44, ../sass/main.scss */
+/* line 20, ../sass/_globals.scss */
 img {
   max-width: 100%;
 }
 
-/* line 48, ../sass/main.scss */
+/* line 24, ../sass/_globals.scss */
 a {
   text-decoration: none;
 }
 
-/* line 52, ../sass/main.scss */
+/* line 28, ../sass/_globals.scss */
 ul {
   list-style: none;
   padding: 0;
 }
 
-/* line 57, ../sass/main.scss */
+/* line 33, ../sass/_globals.scss */
 hr {
   border: none;
   height: 4px;
@@ -51,7 +50,7 @@ hr {
   width: 80%;
 }
 
-/* line 65, ../sass/main.scss */
+/* line 41, ../sass/_globals.scss */
 header {
   width: 100%;
   height: 80px;
@@ -61,7 +60,7 @@ header {
   right: 0;
   z-index: 3;
 }
-/* line 74, ../sass/main.scss */
+/* line 50, ../sass/_globals.scss */
 header .background-pane {
   display: flex;
   flex-flow: center;
@@ -73,20 +72,20 @@ header .background-pane {
   opacity: 1;
   color: #fff;
 }
-/* line 85, ../sass/main.scss */
+/* line 61, ../sass/_globals.scss */
 header .background-pane .title {
   flex-grow: 1;
   text-align: center;
   font-size: 1.5em;
   text-shadow: 2px 2px 0px #BB0C00;
 }
-/* line 91, ../sass/main.scss */
+/* line 67, ../sass/_globals.scss */
 header .background-pane .title img {
   max-height: 40px;
   margin-top: 20px;
 }
 
-/* line 99, ../sass/main.scss */
+/* line 75, ../sass/_globals.scss */
 .page-title {
   text-align: center;
   font-size: 3em;
@@ -97,9 +96,6 @@ header .background-pane .title img {
   text-shadow: 2px 2px 0px #BB0C00;
 }
 
-/* ================= */
-/* == SIDEDRAWER == */
-/* ================= */
 /* line 1, ../sass/_side-drawer.scss */
 .menu-button {
   color: #fff;
@@ -193,7 +189,7 @@ side-drawer.open {
 /* ================== */
 /* == HERO/LANDING == */
 /* ================== */
-/* line 119, ../sass/main.scss */
+/* line 6, ../sass/_landing-page.scss */
 .artist-hero {
   width: 100%;
   height: 100vh;
@@ -207,7 +203,7 @@ side-drawer.open {
   position: relative;
   transition: all 2s ease;
 }
-/* line 133, ../sass/main.scss */
+/* line 20, ../sass/_landing-page.scss */
 .artist-hero .landing-overlay {
   width: 100%;
   height: 100%;
@@ -216,21 +212,21 @@ side-drawer.open {
   left: 0;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
 }
-/* line 143, ../sass/main.scss */
+/* line 30, ../sass/_landing-page.scss */
 .artist-hero .artist-name {
   color: #fff;
   text-shadow: 2px 2px 0px #BB0C00;
 }
-/* line 147, ../sass/main.scss */
+/* line 34, ../sass/_landing-page.scss */
 .artist-hero .artist-name h1 {
   margin: 0;
 }
-/* line 149, ../sass/main.scss */
+/* line 36, ../sass/_landing-page.scss */
 .artist-hero .artist-name h1 + span {
   font-size: 2em;
 }
 @media screen and (min-width: 980px) {
-  /* line 143, ../sass/main.scss */
+  /* line 30, ../sass/_landing-page.scss */
   .artist-hero .artist-name {
     position: absolute;
     top: 20%;
@@ -238,14 +234,14 @@ side-drawer.open {
   }
 }
 @media screen and (max-width: 1200px) {
-  /* line 143, ../sass/main.scss */
+  /* line 30, ../sass/_landing-page.scss */
   .artist-hero .artist-name {
     position: absolute;
     top: 30%;
     right: 8%;
   }
 }
-/* line 168, ../sass/main.scss */
+/* line 55, ../sass/_landing-page.scss */
 .artist-hero .social-media {
   width: 100%;
   display: block;
@@ -253,7 +249,7 @@ side-drawer.open {
   left: 0;
   bottom: 0;
 }
-/* line 175, ../sass/main.scss */
+/* line 62, ../sass/_landing-page.scss */
 .artist-hero .social-media .to-next {
   display: block;
   position: absolute;
@@ -264,26 +260,26 @@ side-drawer.open {
   text-shadow: 0 0 0 #fff;
   cursor: pointer;
 }
-/* line 185, ../sass/main.scss */
+/* line 72, ../sass/_landing-page.scss */
 .artist-hero .social-media .to-next i {
   transition: all 0.4s ease;
 }
-/* line 189, ../sass/main.scss */
+/* line 76, ../sass/_landing-page.scss */
 .artist-hero .social-media .to-next:hover i {
   transform: scale(1.25);
 }
-/* line 194, ../sass/main.scss */
+/* line 81, ../sass/_landing-page.scss */
 .artist-hero .social-media li {
   text-align: center;
   display: inline-block;
 }
 @media screen and (max-width: 634px) {
-  /* line 194, ../sass/main.scss */
+  /* line 81, ../sass/_landing-page.scss */
   .artist-hero .social-media li {
     margin: 0.5em 0;
   }
 }
-/* line 202, ../sass/main.scss */
+/* line 89, ../sass/_landing-page.scss */
 .artist-hero .social-media li a {
   color: white;
   padding: 0 0.5em;
@@ -292,7 +288,7 @@ side-drawer.open {
   -webkit-transition: all 0.4s ease;
   font-size: 1.5em;
 }
-/* line 210, ../sass/main.scss */
+/* line 97, ../sass/_landing-page.scss */
 .artist-hero .social-media li a:hover {
   opacity: 1;
   text-shadow: 0px 0px 0px #BB0C00;
@@ -301,12 +297,12 @@ side-drawer.open {
 /* =================== */
 /* == MUSIC SECTION == */
 /* =================== */
-/* line 223, ../sass/main.scss */
+/* line 5, ../sass/_music-section.scss */
 #album-section {
   padding-bottom: 80px;
   position: relative;
 }
-/* line 227, ../sass/main.scss */
+/* line 9, ../sass/_music-section.scss */
 #album-section::after {
   content: '';
   display: block;
@@ -321,35 +317,7 @@ side-drawer.open {
   z-index: -999;
   opacity: 0.7;
 }
-/* line 242, ../sass/main.scss */
-#album-section .embeded-player {
-  max-width: 1000px;
-  height: 470px;
-  margin: 0 auto;
-  overflow: hidden;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  position: relative;
-}
-/* line 251, ../sass/main.scss */
-#album-section .embeded-player::after {
-  content: 'Click on a track for a 30 second preview.';
-  position: absolute;
-  bottom: 1em;
-  left: 1em;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 90%;
-}
-/* line 260, ../sass/main.scss */
-#album-section .embeded-player iframe {
-  width: 100%;
-  height: 520px;
-  border: 0px;
-}
 
-/* ==================== */
-/* == PHOTOS SECTION == */
-/* ==================== */
 /* line 1, ../sass/_photo-grid.scss */
 #photo-section {
   position: relative;
@@ -476,9 +444,6 @@ side-drawer.open {
   align-items: center;
 }
 
-/* ==================== */
-/* == VIDEOS SECTION == */
-/* ==================== */
 /* line 1, ../sass/_video-grid.scss */
 #video-section {
   padding-bottom: 80px;
@@ -523,9 +488,6 @@ side-drawer.open {
   border-radius: 4px;
 }
 
-/* ============ */
-/* == FOOTER == */
-/* ============ */
 /* line 1, ../sass/_footer.scss */
 footer {
   width: 100%;

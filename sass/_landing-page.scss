@@ -1,0 +1,104 @@
+/* ================== */
+/* == HERO/LANDING == */
+/* ================== */
+
+// Container
+.artist-hero {
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	transition: all 2s ease;
+
+	// Overlay
+	.landing-overlay {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+	}
+
+	// Title
+	.artist-name {
+		color: #fff;
+		text-shadow: 2px 2px 0px $redColor;
+
+		h1 {
+			margin: 0;
+			& + span {
+				font-size: 2em;
+			}
+		}
+
+		@media screen and (min-width: 980px) {
+			position: absolute;
+			top: 20%;
+			right: 8%;
+		}
+
+		@media screen and (max-width: 1200px) {
+			position: absolute;
+			top: 30%;
+			right: 8%;
+		}
+	}
+
+	// Social Media Links
+	.social-media {
+		width: 100%;
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+
+		.to-next {
+			display: block;
+			position: absolute;
+			top: -100%;
+			left: 50%;
+			color: rgba(187, 12, 0, 0.7);
+			opacity: 0;
+			text-shadow: 0 0 0 #fff;
+			cursor: pointer;
+
+			i {
+				transition: all 0.4s ease;
+			}
+
+			&:hover i {
+				transform: scale(1.25);
+			}
+		}
+
+		li {
+			text-align: center;
+			display: inline-block;
+
+			@media screen and (max-width: 634px) {
+				margin: 0.5em 0;
+			}
+
+			a {
+				color: rgba(255, 255, 255, 1);
+				padding: 0 0.5em;
+				text-shadow: 2px 2px 0px $redColor;
+				opacity: 0.8;
+				-webkit-transition: all 0.4s ease;
+				font-size: 1.5em;
+
+				&:hover {
+					opacity: 1;
+					text-shadow: 0px 0px 0px $redColor;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,83 @@
+/* ============ */
+/* == GLOBAL == */
+/* ============ */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+hr {
+	border: none;
+	height: 4px;
+	background: rgba(50, 50, 50, 0.15);
+	border-radius: 50%;
+	width: 80%;
+}
+
+header {
+	width: 100%;
+	height: $headerBgHeight;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+
+	.background-pane {
+		display: flex;
+		flex-flow: center;
+		align-items: center;
+		align-content: center;
+		width: 100%;
+		height: $headerBgHeight;
+		background-color: #000;
+		opacity: 1;
+		color: #fff;
+
+		.title {
+			flex-grow: 1;
+			text-align: center;
+			font-size: 1.5em;
+			text-shadow: 2px 2px 0px $redColor;
+
+			img {
+				max-height: $headerBgHeight / 2;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.page-title {
+	text-align: center;
+	font-size: 3em;
+	color: #fff;
+	margin: 0 0 80px;
+	padding: 30px 0;
+	background: #000;
+	text-shadow: 2px 2px 0px $redColor;
+}
