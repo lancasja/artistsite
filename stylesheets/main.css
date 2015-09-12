@@ -137,7 +137,7 @@ side-drawer {
   height: 100vh;
   background: rgba(50, 50, 50, 0.9);
   color: #fff;
-  z-index: 4;
+  z-index: 6;
   box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.36);
   transform: translateX(-300px);
   opacity: 0;
@@ -331,8 +331,9 @@ side-drawer.open {
   max-height: 785px;
   margin: 0 auto;
   z-index: 4;
+  position: relative;
 }
-/* line 30, ../sass/_music-section.scss */
+/* line 31, ../sass/_music-section.scss */
 #album-section .cdb-player .player-inner {
   position: relative;
   height: 0;
@@ -340,7 +341,7 @@ side-drawer.open {
   padding-bottom: 100%;
   padding-top: 200px;
 }
-/* line 37, ../sass/_music-section.scss */
+/* line 38, ../sass/_music-section.scss */
 #album-section .cdb-player .player-inner iframe {
   position: absolute;
   top: 0px;
@@ -348,6 +349,60 @@ side-drawer.open {
   width: 100%;
   height: 100%;
   border: 0px;
+}
+
+/* line 50, ../sass/_music-section.scss */
+.album-credits {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  overflow: scroll;
+}
+/* line 59, ../sass/_music-section.scss */
+.album-credits .dropdown {
+  background: rgba(255, 255, 255, 0.3);
+  width: 150px;
+  text-align: center;
+  padding: 15px 0;
+  float: right;
+  color: #fff;
+  font-size: 80%;
+}
+/* line 69, ../sass/_music-section.scss */
+.album-credits .dropdown-content {
+  height: 0;
+  width: 100%;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.9);
+  float: right;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
+  overflow: hidden;
+}
+/* line 79, ../sass/_music-section.scss */
+.album-credits .dropdown-content h4 {
+  border-top: 1px solid rgba(50, 50, 50, 0.1);
+  border-bottom: 1px solid rgba(50, 50, 50, 0.1);
+  padding: 7px 0;
+  background: rgba(200, 200, 200, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+/* line 87, ../sass/_music-section.scss */
+.album-credits .dropdown-content li {
+  margin: 7px 0;
+  font-size: 0.9em;
+}
+/* line 91, ../sass/_music-section.scss */
+.album-credits .dropdown-content li strong + span {
+  font-size: 90%;
+  opacity: 0.7;
+}
+/* line 97, ../sass/_music-section.scss */
+.album-credits .dropdown-content.open {
+  height: auto;
 }
 
 /* line 1, ../sass/_photo-grid.scss */

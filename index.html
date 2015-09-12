@@ -104,11 +104,34 @@
 		</div>
 	</section>
 
-	<!-- ALBUMS -->
+	<!-- MUSIC-->
 	<section id="album-section" class="music-section tk-proxima-nova" ng-controller="MusicSectionController">
 		<h1 class="page-title tk-estilo-pro">Music</h1>
 
 		<div class="cdb-player">
+			<div class="album-credits" open-content ng-controller="AlbumCreditsController">
+				
+				<div class="dropdown">
+					<span>Album Credits</span>
+					<i class="fa fa-chevron-down"></i>
+				</div>
+				
+				<div class="dropdown-content">
+					
+					<div class="track-credits" ng-repeat="track in albumCredits">
+						<h4>{{$index + 1}}. {{track.title}}</h4>
+						<ul ng-repeat="player in track.players">
+							<li>
+								<strong>{{player.name}}</strong>&nbsp;
+								<span>{{player.instruments | arrayToString}}</span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				
+			</div>
+			
 			<div class="player-inner">
 				<iframe ng-src="{{playerType}}"></iframe>
 			</div>

@@ -281,6 +281,44 @@ app.directive('sideDrawerToggle', function () {
 	};
 });
 
+app.directive('openContent', function() {
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs) {
+			var children = element[0].children;
+			var $dropdown = $(children[0]);
+			
+			function openContent() {
+				for (var i = 0; i < children.length; i++) {
+					var child = children[i];
+					
+					if (child.classList.contains('dropdown-content')) {
+						if (child.classList.contains('open')) {
+							child.classList.remove('open');
+						}
+						else {
+							child.classList.add('open');
+						}
+					}
+				}
+			}
+			
+			$dropdown.bind('click', function() {
+				openContent();
+			});
+		}
+	}
+});
+
+/* ============= */
+/* == FILTERS == */
+/* ============= */
+app.filter('arrayToString', function() {
+	return function(input) {
+		return input.join(', ');
+	}
+});
+
 /* ================= */
 /* == CONTROLLERS == */
 /* ================= */
@@ -309,19 +347,188 @@ app.controller('ArtistController', function($scope, ArtistService) {
 app.controller('MusicSectionController', function($scope, $window, $sce) {
 	
 	var playerType;
+	var playerUrl;
 	
 	if ($window.innerWidth > 768) {
 		playerType = 'full';
 	}
-	
 	else {
 		playerType = 'album';
 	}
 	
-	var playerUrl = 'http://widget.cdbaby.com/cf949146-4936-43f2-9b76-9f11c51f95ee/' + playerType + '/light/opaque';
+	playerUrl = 'http://widget.cdbaby.com/cf949146-4936-43f2-9b76-9f11c51f95ee/' + playerType + '/light/opaque';
 	
 	$scope.playerType = $sce.trustAsResourceUrl(playerUrl);
 });
+
+/* ============================== */
+/* == ALBUM CREDITS CONTROLLER == */
+/* ============================== */
+app.controller('AlbumCreditsController', function($scope) {
+	
+	var tracks = [
+		{
+			title: 'Found My Place',
+			players: [
+				{
+					name: 'Jody Calcara',
+					instruments: ['Vocals', 'Guitar', 'Bass']
+				},
+				{
+					name: 'Richard Howell',
+					instruments: ['Saxophone']
+				},
+				{
+					name: 'Susan Copperman',
+					instruments: ['Saxophone']
+				},
+				{
+					name: 'Joel Lindheimer',
+					instruments: ['Guitar']
+				},
+				{
+					name: 'Chick Petersen',
+					instruments: ['Guitar']
+				},
+				{
+					name: 'Mike Gay',
+					instruments: ['Drums']
+				},
+				{
+					name: 'Ele Howell',
+					instruments: ['Djembe']
+				}
+			]
+		},
+		{
+			title: 'The Wells',
+			players: [
+				{
+					name: 'Jody Calcara',
+					instruments: ['Vocals', 'Guitar', 'Bass']
+				},
+				{
+					name: 'Chris Von Sneidern',
+					instruments: ['Guitar']
+				},
+				{
+					name: 'Prarie Prince',
+					instruments: ['Drums']
+				}
+			]
+		},
+		{
+			title: 'Close to Me',
+			players: [
+				{
+					name: 'Jody Calcara',
+					instruments: ['Vocals', 'Guitar', 'Bass']
+				},
+				{
+					name: 'Chris Von Sneidern',
+					instruments: ['Guitar']
+				},
+				{
+					name: 'Richard Howell',
+					instruments: ['Saxophone']
+				},
+				{
+					name: 'Prarie Prince',
+					instruments: ['Drums']
+				}
+			]
+		},
+		{
+			title: 'Volcanoes',
+			players: [
+				{
+					name: 'Jody Calcara',
+					instruments: ['Vocals', 'Guitar', 'Bass']
+				},
+				{
+					name: 'Maya Daniels',
+					instruments: ['Vocals']
+				},
+				{
+					name: 'Tom Pellizzer',
+					instruments: ['Guitar']
+				},
+				{
+					name: 'Jerry Pellizzer',
+					instruments: ['Drums']
+				}
+			]
+		},
+		{
+			title: 'Waiting for You',
+			players: [
+				{
+					name: 'Jody Calcara',
+					instruments: ['Vocals', '12 String Guitar', 'Bass']
+				},
+				{
+					name: 'Nathan Winter',
+					instruments: ['Drums']
+				}
+			]
+		},
+		{
+			title: 'Leaving Footprints',
+			players: [
+				{
+					name: 'Jody Calcara',
+					instruments: ['Vocals', 'Guitar', 'Bass', 'Percussion']
+				},
+				{
+					name: 'Maya Daniels',
+					instruments: ['Vocals']
+				},
+				{
+					name: 'Jack Kertzman',
+					instruments: ['Percussion']
+				}
+			]
+		},
+		{
+			title: 'See You Down the Road',
+			players: [
+				{
+					name: 'Jody Calcara',
+					instruments: ['Vocals', 'Guitar', 'Bass', 'Percussion']
+				},
+				{
+					name: 'Maya Daniels',
+					instruments: ['Vocals']
+				}
+			]
+		},
+		{
+			title: 'Notes',
+			players: [
+				{
+					name: 'Producer',
+					instruments: ['Jody Calcara']
+				},
+				{
+					name: 'Recording Engineer',
+					instruments: ['Jack Kertzman']
+				},
+				{
+					name: 'Mastering',
+					instruments: ['Rainer Gambalczyk of Sienna Digital']
+				},
+				{
+					name: 'All songs written by',
+					instruments: ['Jody Calcara']
+				}
+			]
+		}
+	];
+	
+	$scope.albumCredits = tracks;
+	
+});
+
 
 
 
@@ -383,7 +590,10 @@ app.controller('VideoSectionController', function($scope) {
 
 	$scope.videos = [
 		{
-			src: "_FhJMhDOo24",
+			src: "_FhJMhDOo24"
+		},
+		{
+			src: "uzEs-ARenj0"
 		}
 	];
 
@@ -394,8 +604,6 @@ app.controller('VideoSectionController', function($scope) {
 	$scope.featured = $scope.videos[0].src;
 
 });
-
-
 
 
 app.controller('FooterController', function($scope, ArtistService, PhotoService) {
