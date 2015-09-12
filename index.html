@@ -192,6 +192,11 @@
 
 			<div class="video-cell" ng-repeat="video in videos">
 				<iframe allowfullscreen="allowfullscreen" ng-src="{{getIframeSrc(video.src)}}"></iframe>
+				
+				<div class="video-credits">
+					<h4>{{video.title}}</h4>
+					<p>{{video.credits | arrayToString}}</p>
+				</div>
 			</div>
 		</div>
 	</section>

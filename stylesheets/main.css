@@ -359,7 +359,7 @@ side-drawer.open {
   top: 0;
   right: 0;
   z-index: 5;
-  overflow: scroll;
+  overflow: hidden;
 }
 /* line 59, ../sass/_music-section.scss */
 .album-credits .dropdown {
@@ -371,18 +371,24 @@ side-drawer.open {
   color: #fff;
   font-size: 80%;
 }
-/* line 69, ../sass/_music-section.scss */
+@media screen and (min-width: 768px) {
+  /* line 59, ../sass/_music-section.scss */
+  .album-credits .dropdown {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+/* line 73, ../sass/_music-section.scss */
 .album-credits .dropdown-content {
   height: 0;
   width: 100%;
   padding: 0 16px;
-  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
   float: right;
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
-  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
 }
-/* line 79, ../sass/_music-section.scss */
+/* line 83, ../sass/_music-section.scss */
 .album-credits .dropdown-content h4 {
   border-top: 1px solid rgba(50, 50, 50, 0.1);
   border-bottom: 1px solid rgba(50, 50, 50, 0.1);
@@ -390,19 +396,20 @@ side-drawer.open {
   background: rgba(200, 200, 200, 0.1);
   color: rgba(0, 0, 0, 0.7);
 }
-/* line 87, ../sass/_music-section.scss */
+/* line 91, ../sass/_music-section.scss */
 .album-credits .dropdown-content li {
   margin: 7px 0;
   font-size: 0.9em;
 }
-/* line 91, ../sass/_music-section.scss */
+/* line 95, ../sass/_music-section.scss */
 .album-credits .dropdown-content li strong + span {
   font-size: 90%;
   opacity: 0.7;
 }
-/* line 97, ../sass/_music-section.scss */
+/* line 101, ../sass/_music-section.scss */
 .album-credits .dropdown-content.open {
   height: auto;
+  opacity: 1;
 }
 
 /* line 1, ../sass/_photo-grid.scss */
@@ -578,17 +585,29 @@ side-drawer.open {
 .video-grid .video-cell {
   margin: 16px;
   flex-grow: 1;
-  height: 400px;
   max-width: 800px;
 }
-/* line 32, ../sass/_video-grid.scss */
+/* line 31, ../sass/_video-grid.scss */
 .video-grid .video-cell iframe {
   width: 100%;
-  height: 100%;
+  height: 300px;
   border: none;
   display: block;
   margin: 0 auto;
   border-radius: 4px;
+}
+@media screen and (min-width: 640px) {
+  /* line 31, ../sass/_video-grid.scss */
+  .video-grid .video-cell iframe {
+    height: 400px;
+  }
+}
+/* line 44, ../sass/_video-grid.scss */
+.video-grid .video-cell .video-credits {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1px 24px;
+  font-size: 0.8em;
 }
 
 /* line 1, ../sass/_footer.scss */

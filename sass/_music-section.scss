@@ -54,7 +54,7 @@
 	top: 0;
 	right: 0;
 	z-index: 5;
-	overflow: scroll;
+	overflow: hidden;
 	
 	.dropdown {
 		background: rgba(255, 255, 255, 0.3);
@@ -64,18 +64,22 @@
 		float: right;
 		color: #fff;
 		font-size: 80%;
+		
+		@media screen and (min-width: 768px) {
+			background: rgba(0, 0, 0, 0.7);
+		}
 	}
 	
 	.dropdown-content {
 		height: 0;
 		width: 100%;
 		padding: 0 16px;
-		background: rgba(255, 255, 255, 0.9);
+		background: #fff;
 		float: right;
-		-webkit-transition: height 0.5s ease;
-		transition: height 0.5s ease;
-		overflow: hidden;
-		
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		opacity: 0;
+			
 		h4 {
 			border-top: 1px solid rgba(50, 50, 50, 0.1);
 			border-bottom: 1px solid rgba(50, 50, 50, 0.1);
@@ -96,6 +100,7 @@
 		
 		&.open {
 			height: auto;
+			opacity: 1;
 		}
 	}
 }

@@ -287,7 +287,7 @@ app.directive('openContent', function() {
 		link: function(scope, element, attrs) {
 			var children = element[0].children;
 			var $dropdown = $(children[0]);
-			
+
 			function openContent() {
 				for (var i = 0; i < children.length; i++) {
 					var child = children[i];
@@ -295,9 +295,11 @@ app.directive('openContent', function() {
 					if (child.classList.contains('dropdown-content')) {
 						if (child.classList.contains('open')) {
 							child.classList.remove('open');
+							element[0].style.overflow = 'hidden';
 						}
 						else {
 							child.classList.add('open');
+							element[0].style.overflow = 'auto';
 						}
 					}
 				}
@@ -590,10 +592,19 @@ app.controller('VideoSectionController', function($scope) {
 
 	$scope.videos = [
 		{
-			src: "_FhJMhDOo24"
+			src: '_FhJMhDOo24',
+			title: 'See You Down the Road',
+			credits: [
+				'Robert Ogden & Bryna Hubbs of Whataday Productions'
+			]
 		},
 		{
-			src: "uzEs-ARenj0"
+			src: "uzEs-ARenj0",
+			title: 'Volcanoes',
+			credits: [
+				'Camera work by Joe & Maj Maydak',
+				'Editing by Robert Ogden'
+			]
 		}
 	];
 
