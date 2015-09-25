@@ -79,27 +79,60 @@ header {
 }
 /* line 14, ../sass/_header.scss */
 header .background-pane {
-  display: flex;
-  flex-flow: center;
-  align-items: center;
-  align-content: center;
   width: 100%;
   height: 60px;
   background-color: #000;
   opacity: 1;
   color: #fff;
 }
-/* line 25, ../sass/_header.scss */
+/* line 21, ../sass/_header.scss */
 header .background-pane .title {
-  flex-grow: 1;
   text-align: center;
   font-size: 1.5em;
   text-shadow: 2px 2px 0px #BB0C00;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-/* line 31, ../sass/_header.scss */
+/* line 27, ../sass/_header.scss */
 header .background-pane .title img {
   max-height: 30px;
-  margin-top: 20px;
+}
+/* line 32, ../sass/_header.scss */
+header .background-pane .header-menu {
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+@media screen and (max-width: 769px) {
+  /* line 32, ../sass/_header.scss */
+  header .background-pane .header-menu {
+    font-size: 80%;
+    margin-top: 22px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 32, ../sass/_header.scss */
+  header .background-pane .header-menu {
+    display: none;
+  }
+}
+/* line 47, ../sass/_header.scss */
+header .background-pane .header-menu li {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 16px;
+}
+/* line 52, ../sass/_header.scss */
+header .background-pane .header-menu li a {
+  color: #fff;
+}
+@media screen and (max-width: 769px) {
+  /* line 47, ../sass/_header.scss */
+  header .background-pane .header-menu li {
+    padding: 0 10px;
+  }
 }
 
 /* line 1, ../sass/_side-drawer.scss */
