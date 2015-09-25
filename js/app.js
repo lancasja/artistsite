@@ -122,7 +122,7 @@ app.factory('PhotoService', function() {
 
 		},
 		{
-			name: 'Jody & Dundee',
+			name: '',
 			source: 'img/landing-background.jpg'
 		},
 		{
