@@ -146,8 +146,8 @@ app.factory('PhotoService', function() {
 			source: 'img/joel-lindheimer.jpg'
 		},
 		{
-			name: 'Prarie Prince',
-			source: 'img/prarie-prince.jpg'
+			name: 'Prairie Prince',
+			source: 'img/Prairie-prince.jpg'
 		},
 		{
 			name: 'Robert Ogden & Bryna Hubbs',
@@ -162,7 +162,7 @@ app.factory('PhotoService', function() {
 			source: 'img/jody00-thumb.jpg'
 		},
 		{
-			name: 'Richard Howell, Prarie Prince, JC, Chris Von Sneidern',
+			name: 'Richard Howell, Prairie Prince, JC, Chris Von Sneidern',
 			source: 'img/pp-rh-jc-cvs.jpg'
 		},
 		{
@@ -190,7 +190,7 @@ app.factory('PhotoService', function() {
 			source: 'img/nathan-drums.jpg'
 		},
 		{
-			name: 'Richard Howell, Prarie Prince, JC, Chris Von Sneidern',
+			name: 'Richard Howell, Prairie Prince, JC, Chris Von Sneidern',
 			source: 'img/pp-and-all.jpg'
 		}
 	];
@@ -290,16 +290,21 @@ app.directive('openContent', function() {
 
 			function openContent() {
 				for (var i = 0; i < children.length; i++) {
-					var child = children[i];
-					
+					var child = children[1].children[i];
+					console.log(child);
 					if (child.classList.contains('dropdown-content')) {
 						if (child.classList.contains('open')) {
 							child.classList.remove('open');
 							element[0].style.overflow = 'hidden';
+							$dropdown.css({
+								'top': '400px',
+								'right': '15px'
+							});
 						}
 						else {
 							child.classList.add('open');
 							element[0].style.overflow = 'auto';
+							$dropdown.css('top', '7px');
 						}
 					}
 				}
@@ -414,7 +419,7 @@ app.controller('AlbumCreditsController', function($scope) {
 					instruments: ['Guitar']
 				},
 				{
-					name: 'Prarie Prince',
+					name: 'Prairie Prince',
 					instruments: ['Drums']
 				}
 			]
@@ -435,7 +440,7 @@ app.controller('AlbumCreditsController', function($scope) {
 					instruments: ['Saxophone']
 				},
 				{
-					name: 'Prarie Prince',
+					name: 'Prairie Prince',
 					instruments: ['Drums']
 				}
 			]
