@@ -1,0 +1,31 @@
+.shows-section {
+	padding-bottom: 80px;
+	background: #4AA0E8;
+	color: #333;
+
+	div {
+
+		p {
+			padding: 0 50px;
+			font-size: 1.25em;
+			line-height: 1.5em;
+			max-width: 820px;
+			margin: 0 auto;
+
+			a {
+				font-weight: bold;
+				color: #333;
+
+				&:hover {
+					text-decoration: underline;
+					color: #555;
+				}
+			}
+
+			strong {
+				text-decoration: underline;
+				color: #ffffff;
+			}
+		}
+	}
+}

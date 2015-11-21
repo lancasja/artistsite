@@ -57,23 +57,25 @@
 			<ul class="side-drawer-links">
 				<li><a href="#landing-section" animate-to-anchor>Home</a></li>
 				<li><a href="#album-section" animate-to-anchor>Music</a></li>
+				<li><a href="#shows-section" animate-to-anchor>Performances</a></li>
 				<li><a href="#photo-section" animate-to-anchor>Photos</a></li>
 				<li><a href="#video-section" animate-to-anchor>Videos</a></li>
 			</ul>
 		</div>
 	</side-drawer>
 
-	<header ng-controller="HeaderController" scroll-fade>
+	<header ng-controller="HeaderController">
 		
 		<div class="background-pane">
 			<h1 class="title tk-estilo-pro">
 				<a href="#landing-section" animate-to-anchor>
-					<img ng-src="{{logo}}" alt="title">
+					<!-- <img ng-src="{{logo}}" alt="title"> -->
 				</a>
 			</h1>
 			
 			<ul class="header-menu">
 				<li><a href="#album-section" animate-to-anchor>Music</a></li>
+				<li><a href="#shows-section" animate-to-anchor>Performances</a></li>
 				<li><a href="#photo-section" animate-to-anchor>Photos</a></li>
 				<li><a href="#video-section" animate-to-anchor>Videos</a></li>
 			</ul>
@@ -144,10 +146,19 @@
 			<div class="player-inner">
 				<iframe ng-src="{{playerType}}"></iframe>
 			</div>
-		</div>
-		
-		
+		</div>		
 	</section>
+
+
+	<!-- MUSIC-->
+	<section id="shows-section" class="shows-section tk-proxima-nova">
+		<h1 class="page-title tk-estilo-pro">Performances</h1>
+
+		<div>
+			<p><strong>Jody Calcara &amp; The Avocado Jungle Band</strong> will play the <a href="https://goo.gl/maps/RbHKocP4CNy" target="_blank">Presidio Yacht Club (Travis Marina, 679 Sommerville Rd, Sausalito, CA 94965)</a> on <strong>Friday Nov. 27th at 8:30 PM</strong>, and <strong>Friday Jan. 22nd 2016, at 8:30 PM</strong>. There will be a <strong>$7 cover</strong> charge. A fabulous view of the Golden Gate Bridge & the City across the Bay.  Join us for your dancing &amp; listening pleasure...</p>
+		</div>
+	</section>
+
 
 
 	<!-- PHOTOS -->
