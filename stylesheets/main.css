@@ -235,7 +235,7 @@ side-drawer.open {
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-position: 50% 100%;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -259,30 +259,10 @@ side-drawer.open {
   text-shadow: 2px 2px 0px #BB0C00;
 }
 /* line 34, ../sass/_landing-page.scss */
-.artist-hero .artist-name h1 {
-  margin: 0;
-}
-/* line 36, ../sass/_landing-page.scss */
-.artist-hero .artist-name h1 + span {
+.artist-hero .artist-name span {
   font-size: 2em;
 }
-@media screen and (min-width: 980px) {
-  /* line 30, ../sass/_landing-page.scss */
-  .artist-hero .artist-name {
-    position: absolute;
-    top: 20%;
-    right: 8%;
-  }
-}
-@media screen and (max-width: 1200px) {
-  /* line 30, ../sass/_landing-page.scss */
-  .artist-hero .artist-name {
-    position: absolute;
-    top: 30%;
-    right: 8%;
-  }
-}
-/* line 55, ../sass/_landing-page.scss */
+/* line 40, ../sass/_landing-page.scss */
 .artist-hero .social-media {
   width: 100%;
   display: block;
@@ -290,7 +270,7 @@ side-drawer.open {
   left: 0;
   bottom: 0;
 }
-/* line 62, ../sass/_landing-page.scss */
+/* line 47, ../sass/_landing-page.scss */
 .artist-hero .social-media .to-next {
   display: block;
   position: absolute;
@@ -301,26 +281,26 @@ side-drawer.open {
   text-shadow: 0 0 0 #fff;
   cursor: pointer;
 }
-/* line 72, ../sass/_landing-page.scss */
+/* line 57, ../sass/_landing-page.scss */
 .artist-hero .social-media .to-next i {
   transition: all 0.4s ease;
 }
-/* line 76, ../sass/_landing-page.scss */
+/* line 61, ../sass/_landing-page.scss */
 .artist-hero .social-media .to-next:hover i {
   transform: scale(1.25);
 }
-/* line 81, ../sass/_landing-page.scss */
+/* line 66, ../sass/_landing-page.scss */
 .artist-hero .social-media li {
   text-align: center;
   display: inline-block;
 }
 @media screen and (max-width: 634px) {
-  /* line 81, ../sass/_landing-page.scss */
+  /* line 66, ../sass/_landing-page.scss */
   .artist-hero .social-media li {
     margin: 0.5em 0;
   }
 }
-/* line 89, ../sass/_landing-page.scss */
+/* line 74, ../sass/_landing-page.scss */
 .artist-hero .social-media li a {
   color: white;
   padding: 0 0.5em;
@@ -329,7 +309,7 @@ side-drawer.open {
   -webkit-transition: all 0.4s ease;
   font-size: 1.5em;
 }
-/* line 97, ../sass/_landing-page.scss */
+/* line 82, ../sass/_landing-page.scss */
 .artist-hero .social-media li a:hover {
   opacity: 1;
   text-shadow: 0px 0px 0px #BB0C00;
@@ -367,13 +347,12 @@ side-drawer.open {
 }
 /* line 30, ../sass/_music-section.scss */
 #album-section .cdb-player .player-inner {
-  position: relative;
   height: 0;
   overflow: hidden;
-  padding-bottom: 100%;
+  padding-bottom: 30%;
   padding-top: 200px;
 }
-/* line 37, ../sass/_music-section.scss */
+/* line 36, ../sass/_music-section.scss */
 #album-section .cdb-player .player-inner iframe {
   position: absolute;
   top: 0px;
@@ -383,7 +362,7 @@ side-drawer.open {
   border: 0px;
 }
 
-/* line 49, ../sass/_music-section.scss */
+/* line 48, ../sass/_music-section.scss */
 .dropdown {
   background: rgba(255, 255, 255, 0.3);
   width: 150px;
@@ -394,9 +373,10 @@ side-drawer.open {
   font-size: 80%;
   cursor: pointer;
   z-index: 2;
+  margin-top: -44px;
 }
 @media screen and (min-width: 768px) {
-  /* line 49, ../sass/_music-section.scss */
+  /* line 48, ../sass/_music-section.scss */
   .dropdown {
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
@@ -414,8 +394,9 @@ side-drawer.open {
   right: 0;
   z-index: 1;
   pointer-events: none;
+  overflow: scroll;
 }
-/* line 77, ../sass/_music-section.scss */
+/* line 78, ../sass/_music-section.scss */
 .album-credits .dropdown-content {
   height: 0;
   width: 100%;
@@ -426,7 +407,7 @@ side-drawer.open {
   transition: all 0.5s ease;
   opacity: 0;
 }
-/* line 87, ../sass/_music-section.scss */
+/* line 88, ../sass/_music-section.scss */
 .album-credits .dropdown-content h4 {
   border-top: 1px solid rgba(50, 50, 50, 0.1);
   border-bottom: 1px solid rgba(50, 50, 50, 0.1);
@@ -434,17 +415,17 @@ side-drawer.open {
   background: rgba(200, 200, 200, 0.1);
   color: rgba(0, 0, 0, 0.7);
 }
-/* line 95, ../sass/_music-section.scss */
+/* line 96, ../sass/_music-section.scss */
 .album-credits .dropdown-content li {
   margin: 7px 0;
   font-size: 0.9em;
 }
-/* line 99, ../sass/_music-section.scss */
+/* line 100, ../sass/_music-section.scss */
 .album-credits .dropdown-content li strong + span {
   font-size: 90%;
   opacity: 0.7;
 }
-/* line 105, ../sass/_music-section.scss */
+/* line 106, ../sass/_music-section.scss */
 .album-credits .dropdown-content.open {
   height: auto;
   opacity: 1;

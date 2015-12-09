@@ -19,7 +19,7 @@ app.factory('ArtistService', function() {
 			return {
 				name: 'Jody Calcara',
 				tagLine: 'Singer, Songwriter', 
-				image: 'img/photo_do.png',
+				image: 'img/jody-cover.jpg',
 				logo: 'img/jody-logo.svg',
 				socialMediaLinks: [
 					{
@@ -81,6 +81,18 @@ app.factory('PhotoService', function() {
 		{
 			name: '',
 			source: 'img/jc-01.jpg'
+		},
+		{
+			name: '',
+			source: 'img/jc-04.jpg'
+		},
+		{
+			name: '',
+			source: 'img/jc-05.jpg'
+		},
+		{
+			name: '',
+			source: 'img/jc-06.jpg'
 		},
 		{
 			name: 'A young Ele Howell with the great drummer Elvin Jones',
@@ -295,16 +307,9 @@ app.directive('openContent', function() {
 					if (child.classList.contains('dropdown-content')) {
 						if (child.classList.contains('open')) {
 							child.classList.remove('open');
-							element[0].style.overflow = 'hidden';
-							$dropdown.css({
-								'top': '400px',
-								'right': '15px'
-							});
 						}
 						else {
 							child.classList.add('open');
-							element[0].style.overflow = 'auto';
-							$dropdown.css('top', '7px');
 						}
 					}
 				}
